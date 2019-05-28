@@ -88,6 +88,7 @@
             this.lb_thoat.TabStop = true;
             this.lb_thoat.Text = "Thoát";
             this.lb_thoat.VisitedLinkColor = System.Drawing.Color.DarkTurquoise;
+            this.lb_thoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_thoat_LinkClicked);
             // 
             // GioiThieu
             // 

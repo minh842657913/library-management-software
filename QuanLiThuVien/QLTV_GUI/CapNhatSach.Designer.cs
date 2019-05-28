@@ -272,7 +272,7 @@
             this.MaximumSize = new System.Drawing.Size(700, 500);
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "CapNhatSach";
-            this.Text = "CapNhatSach";
+            this.Text = "Cập nhật sách";
             this.ResumeLayout(false);
             this.PerformLayout();
 

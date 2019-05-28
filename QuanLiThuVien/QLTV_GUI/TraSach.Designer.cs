@@ -257,7 +257,7 @@
             this.MaximumSize = new System.Drawing.Size(700, 475);
             this.MinimumSize = new System.Drawing.Size(700, 475);
             this.Name = "TraSach";
-            this.Text = "TraSach";
+            this.Text = "Trả sách";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

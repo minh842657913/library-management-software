@@ -76,11 +76,11 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="formMain.cs">
+    <Compile Include="GiaoDienChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMain.Designer.cs">
-      <DependentUpon>formMain.cs</DependentUpon>
+    <Compile Include="GiaoDienChinh.Designer.cs">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="GioiThieu.cs">
       <SubType>Form</SubType>
@@ -108,11 +108,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TaoTheDocGia.cs">
+    <Compile Include="LapTheDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TaoTheDocGia.Designer.cs">
-      <DependentUpon>TaoTheDocGia.cs</DependentUpon>
+    <Compile Include="LapTheDocGia.Designer.cs">
+      <DependentUpon>LapTheDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="TraSach.cs">
       <SubType>Form</SubType>
@@ -147,8 +147,8 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formMain.resx">
-      <DependentUpon>formMain.cs</DependentUpon>
+    <EmbeddedResource Include="GiaoDienChinh.resx">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GioiThieu.resx">
       <DependentUpon>GioiThieu.cs</DependentUpon>
@@ -172,8 +172,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TaoTheDocGia.resx">
-      <DependentUpon>TaoTheDocGia.cs</DependentUpon>
+    <EmbeddedResource Include="LapTheDocGia.resx">
+      <DependentUpon>LapTheDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TraSach.resx">
       <DependentUpon>TraSach.cs</DependentUpon>

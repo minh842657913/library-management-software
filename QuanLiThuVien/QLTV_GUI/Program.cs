@@ -16,7 +16,7 @@ namespace QLTV_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formMain());
+            Application.Run(new GiaoDienChinh());
         }
     }
 }

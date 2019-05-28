@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QLTV_GUI
 {
-    public partial class GioiThieu : Form
+    public partial class LapTheDocGia : Form
     {
-        public GioiThieu()
+        public LapTheDocGia()
         {
             InitializeComponent();
-        }
-
-        private void lb_thoat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

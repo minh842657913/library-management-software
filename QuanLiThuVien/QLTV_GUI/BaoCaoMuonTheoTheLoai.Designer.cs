@@ -161,7 +161,7 @@
             this.MaximumSize = new System.Drawing.Size(700, 450);
             this.MinimumSize = new System.Drawing.Size(700, 450);
             this.Name = "BaoCaoMuonTheoTheLoai";
-            this.Text = "BaoCaoMuonTheoTheLoai";
+            this.Text = "Báo cáo mượn theo thể loại";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

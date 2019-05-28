@@ -169,7 +169,7 @@
             this.MaximumSize = new System.Drawing.Size(700, 275);
             this.MinimumSize = new System.Drawing.Size(700, 275);
             this.Name = "PhieuThuTienPhat";
-            this.Text = "PhieuThuTienPhat";
+            this.Text = "Phiếu thu tiền phạt";
             this.ResumeLayout(false);
             this.PerformLayout();
 
