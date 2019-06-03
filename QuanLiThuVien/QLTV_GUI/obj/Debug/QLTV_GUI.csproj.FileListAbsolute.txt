@@ -19,3 +19,4 @@ D:\DATA\HOCHANH\Nhap mon cong nghe phan mem\Quan_Li_Thu_Vien\QuanLiThuVien\QLTV_
 D:\DATA\HOCHANH\Nhap mon cong nghe phan mem\Quan_Li_Thu_Vien\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.csproj.GenerateResource.Cache
 D:\DATA\HOCHANH\Nhap mon cong nghe phan mem\Quan_Li_Thu_Vien\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.exe
 D:\DATA\HOCHANH\Nhap mon cong nghe phan mem\Quan_Li_Thu_Vien\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.pdb
+D:\DATA\HOCHANH\Nhap mon cong nghe phan mem\Quan_Li_Thu_Vien\QuanLiThuVien\QLTV_GUI\obj\Debug\QLTV_GUI.csprojResolveAssemblyReference.cache

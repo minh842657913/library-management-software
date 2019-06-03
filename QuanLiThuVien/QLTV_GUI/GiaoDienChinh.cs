@@ -10,6 +10,13 @@ using System.Windows.Forms;
 
 namespace QLTV_GUI
 {
+
+    /*
+    Program: Quản lí thư viện
+    Written by: Nguyễn Song Luân
+    Description: Giao diện chính của chương trỉnh đảm nhiệm việc kết nối người dùng với các chức năng
+    */
+
     public partial class GiaoDienChinh : Form
     {
         public GiaoDienChinh()
