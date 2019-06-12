@@ -76,6 +76,7 @@
             this.bt_nhapSach.TabIndex = 71;
             this.bt_nhapSach.Text = "NHẬP SÁCH";
             this.bt_nhapSach.UseVisualStyleBackColor = false;
+            this.bt_nhapSach.Click += new System.EventHandler(this.bt_nhapSach_Click);
             // 
             // label11
             // 
@@ -146,6 +147,7 @@
             // 
             this.tb_ngayNhap.Location = new System.Drawing.Point(384, 361);
             this.tb_ngayNhap.Name = "tb_ngayNhap";
+            this.tb_ngayNhap.ReadOnly = true;
             this.tb_ngayNhap.Size = new System.Drawing.Size(155, 20);
             this.tb_ngayNhap.TabIndex = 62;
             // 
@@ -209,9 +211,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(130, 234);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 54;
-            this.label5.Text = "Nhà xuất bản:";
+            this.label5.Text = "Mã NXB:";
             // 
             // label4
             // 
@@ -227,9 +229,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(131, 153);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 52;
-            this.label3.Text = "Tác giả:";
+            this.label3.Text = "Mã tác giả:";
             // 
             // label2
             // 
@@ -281,6 +283,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "NhapSachMoi";
             this.Text = "Nhập sách mới";
+            this.Load += new System.EventHandler(this.NhapSachMoi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

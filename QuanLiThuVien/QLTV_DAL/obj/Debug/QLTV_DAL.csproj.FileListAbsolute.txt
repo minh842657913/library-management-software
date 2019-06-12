@@ -1,0 +1,7 @@
+E:\HKIV\NMCNPM\QuanLiThuVien\QuanLiThuVien\QLTV_DAL\bin\Debug\QLTV_DAL.dll
+E:\HKIV\NMCNPM\QuanLiThuVien\QuanLiThuVien\QLTV_DAL\bin\Debug\QLTV_DAL.pdb
+E:\HKIV\NMCNPM\QuanLiThuVien\QuanLiThuVien\QLTV_DAL\bin\Debug\QLTV_DTO.dll
+E:\HKIV\NMCNPM\QuanLiThuVien\QuanLiThuVien\QLTV_DAL\bin\Debug\QLTV_DTO.pdb
+E:\HKIV\NMCNPM\QuanLiThuVien\QuanLiThuVien\QLTV_DAL\obj\Debug\QLTV_DAL.csprojResolveAssemblyReference.cache
+E:\HKIV\NMCNPM\QuanLiThuVien\QuanLiThuVien\QLTV_DAL\obj\Debug\QLTV_DAL.dll
+E:\HKIV\NMCNPM\QuanLiThuVien\QuanLiThuVien\QLTV_DAL\obj\Debug\QLTV_DAL.pdb

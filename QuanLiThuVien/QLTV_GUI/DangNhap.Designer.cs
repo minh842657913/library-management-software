@@ -49,20 +49,17 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox1.Location = new System.Drawing.Point(172, 63);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 22);
+            this.textBox1.Size = new System.Drawing.Size(222, 20);
             this.textBox1.TabIndex = 2;
             // 
             // tb_matKhau
             // 
             this.tb_matKhau.BackColor = System.Drawing.Color.LightCyan;
-            this.tb_matKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tb_matKhau.Location = new System.Drawing.Point(172, 112);
             this.tb_matKhau.Name = "tb_matKhau";
-            this.tb_matKhau.PasswordChar = '*';
-            this.tb_matKhau.Size = new System.Drawing.Size(222, 22);
+            this.tb_matKhau.Size = new System.Drawing.Size(222, 20);
             this.tb_matKhau.TabIndex = 4;
             // 
             // lb_matKhau
@@ -93,7 +90,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(474, 231);
+            this.ClientSize = new System.Drawing.Size(490, 270);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tb_matKhau);
             this.Controls.Add(this.lb_matKhau);

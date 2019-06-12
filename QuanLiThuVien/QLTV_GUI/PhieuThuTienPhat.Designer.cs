@@ -102,10 +102,8 @@
             // 
             this.tb_tongNo.Location = new System.Drawing.Point(473, 69);
             this.tb_tongNo.Name = "tb_tongNo";
-            this.tb_tongNo.ReadOnly = true;
             this.tb_tongNo.Size = new System.Drawing.Size(162, 20);
             this.tb_tongNo.TabIndex = 64;
-            this.tb_tongNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 

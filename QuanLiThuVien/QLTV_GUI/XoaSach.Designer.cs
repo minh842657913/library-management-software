@@ -52,6 +52,7 @@
             this.bt_xoa.TabIndex = 66;
             this.bt_xoa.Text = "Xóa";
             this.bt_xoa.UseVisualStyleBackColor = true;
+            this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click);
             // 
             // label1
             // 
@@ -82,6 +83,7 @@
             this.MinimumSize = new System.Drawing.Size(352, 238);
             this.Name = "XoaSach";
             this.Text = "Xóa Sách";
+            this.Load += new System.EventHandler(this.XoaSach_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

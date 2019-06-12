@@ -62,6 +62,7 @@
             this.ts_lapPhieuPhat = new System.Windows.Forms.ToolStripButton();
             this.ts_baoCao = new System.Windows.Forms.ToolStripSplitButton();
             this.ts_baoCaoTraTre = new System.Windows.Forms.ToolStripMenuItem();
+            this.ts_baoCaoMuonTheLoai = new System.Windows.Forms.ToolStripMenuItem();
             this.lb_dangXuat = new System.Windows.Forms.LinkLabel();
             this.lb_tenTaiKhoan = new System.Windows.Forms.Label();
             this.pn_account = new System.Windows.Forms.Panel();
@@ -82,7 +83,6 @@
             this.NgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TriGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ts_baoCaoMuonTheLoai = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_thanhMenu.SuspendLayout();
             this.ts_thanhCongCu.SuspendLayout();
             this.pn_account.SuspendLayout();
@@ -362,6 +362,13 @@
             this.ts_baoCaoTraTre.Text = "Báo cáo trả trễ";
             this.ts_baoCaoTraTre.Click += new System.EventHandler(this.ms_baoCaoTraTre_Click);
             // 
+            // ts_baoCaoMuonTheLoai
+            // 
+            this.ts_baoCaoMuonTheLoai.Name = "ts_baoCaoMuonTheLoai";
+            this.ts_baoCaoMuonTheLoai.Size = new System.Drawing.Size(220, 22);
+            this.ts_baoCaoMuonTheLoai.Text = "Báo cáo mượn theo thể loại";
+            this.ts_baoCaoMuonTheLoai.Click += new System.EventHandler(this.ms_baoCaoMuonTheLoai_Click);
+            // 
             // lb_dangXuat
             // 
             this.lb_dangXuat.ActiveLinkColor = System.Drawing.Color.DarkCyan;
@@ -553,13 +560,6 @@
             this.TriGia.HeaderText = "Trị Giá";
             this.TriGia.Name = "TriGia";
             this.TriGia.Width = 125;
-            // 
-            // ts_baoCaoMuonTheLoai
-            // 
-            this.ts_baoCaoMuonTheLoai.Name = "ts_baoCaoMuonTheLoai";
-            this.ts_baoCaoMuonTheLoai.Size = new System.Drawing.Size(220, 22);
-            this.ts_baoCaoMuonTheLoai.Text = "Báo cáo mượn theo thể loại";
-            this.ts_baoCaoMuonTheLoai.Click += new System.EventHandler(this.ms_baoCaoMuonTheLoai_Click);
             // 
             // GiaoDienChinh
             // 
