@@ -75,6 +75,7 @@
             this.bt_capNhat.TabIndex = 94;
             this.bt_capNhat.Text = "CẬP NHẬT";
             this.bt_capNhat.UseVisualStyleBackColor = false;
+            this.bt_capNhat.Click += new System.EventHandler(this.bt_capNhat_Click);
             // 
             // label11
             // 
@@ -273,6 +274,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "CapNhatSach";
             this.Text = "Cập nhật sách";
+            this.Load += new System.EventHandler(this.CapNhatSach_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
