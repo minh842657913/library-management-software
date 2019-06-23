@@ -63,6 +63,16 @@ namespace QLTV_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Account {
+            get {
+                object obj = ResourceManager.GetObject("Account", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book {
             get {
                 object obj = ResourceManager.GetObject("book", resourceCulture);
@@ -86,6 +96,26 @@ namespace QLTV_GUI.Properties {
         internal static System.Drawing.Bitmap favicon {
             get {
                 object obj = ResourceManager.GetObject("favicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap password {
+            get {
+                object obj = ResourceManager.GetObject("password", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap password1 {
+            get {
+                object obj = ResourceManager.GetObject("password1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

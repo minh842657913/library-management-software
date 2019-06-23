@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace QLTV_DTO
 {
+    /* 
+    Program: Quản lí thư viện 
+    Written by: Nguyễn Thành Luân
+    Modified by: Nguyễn Thành Luân 
+    Modified date: 23/05/2019
+    Description: Class mô tả các thuộc tính của loại độc giả
+    */
     public class LoaiDocGia
     {
         string maLoaiDocGia;

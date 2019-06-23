@@ -8,7 +8,7 @@ BEGIN
     FROM MASTER..SysProcesses
     WHERE DBId = DB_ID(N'QuanLiThuVien') AND SPId <> @@SPId
     EXEC(@SQL)
-    DROP DATABASE [QLTC]
+    DROP DATABASE [QuanLiThuVien]
 END
 go
 

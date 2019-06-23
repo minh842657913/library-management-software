@@ -8,30 +8,37 @@ using QLTV_DTO;
 
 namespace QLTV_BUS
 {
+    /* 
+    Program: Quản lí thư viện 
+    Written by: Nguyễn Thành Luân
+    Modified by: Nguyễn Thành Luân 
+    Modified date: 23/05/2019
+    Description: Class mô tả các thuộc tính phương thức cần thiết của sách (lớp bussiness)
+    */
     public class SachBUS
     {
-        private SachDAL saDal;
+        private SachDAL sachDal;
 
         public SachBUS()
         {
-            saDal = new SachDAL();
+            sachDal = new SachDAL();
         }
 
-        public bool Them(Sach sa)
+        public bool Them(Sach sach)
         {
-            bool re = saDal.Them(sa);
+            bool re = sachDal.Them(sach);
             return re;
         }
 
-        public bool Sua(Sach sa)
+        public bool Sua(Sach sach)
         {
-            bool re = saDal.Sua(sa);
+            bool re = sachDal.Sua(sach);
             return re;
         }
 
-        public bool Xoa(Sach sa)
+        public bool Xoa(Sach sach)
         {
-            bool re = saDal.Xoa(sa);
+            bool re = sachDal.Xoa(sach);
             return re;
         }
     }

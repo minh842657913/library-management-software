@@ -9,6 +9,13 @@ using System.Data.SqlClient;
 
 namespace QLTV_DAL
 {
+    /* 
+    Program: Quản lí thư viện 
+    Written by: Nguyễn Thành Luân
+    Modified by: Nguyễn Thành Luân 
+    Modified date: 22/06/2019
+    Description: Class mô tả các thuộc tính phương thức cần thiết của sách (lớp liên kết dữ liệu)
+    */
     public class SachDAL
     {
         private string connectionString;
@@ -31,7 +38,7 @@ namespace QLTV_DAL
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
 
-        public bool Them(Sach sa)
+        public bool Them(Sach sach)
         {
             string query = string.Empty;
             query += "INSERT INTO [SACH] ([maSach], [tenSach], [maLoaiSach], [maTacGia], [namXuatBan], [maNXB], [ngayNhap], [triGia])";
@@ -43,14 +50,14 @@ namespace QLTV_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@maSach", sa.MaSach);
-                    cmd.Parameters.AddWithValue("@tenSach", sa.TenSach);
-                    cmd.Parameters.AddWithValue("@maLoaiSach", sa.LoaiSach);
-                    cmd.Parameters.AddWithValue("@maTacGia", sa.MaTacGia);
-                    cmd.Parameters.AddWithValue("@namXuatBan", sa.NamXuatBan);
-                    cmd.Parameters.AddWithValue("@maNXB", sa.MaNhaXuatBan);
-                    cmd.Parameters.AddWithValue("@ngayNhap", sa.NgayNhap);
-                    cmd.Parameters.AddWithValue("@triGia", sa.TriGia);
+                    cmd.Parameters.AddWithValue("@maSach", sach.MaSach);
+                    cmd.Parameters.AddWithValue("@tenSach", sach.TenSach);
+                    cmd.Parameters.AddWithValue("@maLoaiSach", sach.LoaiSach);
+                    cmd.Parameters.AddWithValue("@maTacGia", sach.MaTacGia);
+                    cmd.Parameters.AddWithValue("@namXuatBan", sach.NamXuatBan);
+                    cmd.Parameters.AddWithValue("@maNXB", sach.MaNhaXuatBan);
+                    cmd.Parameters.AddWithValue("@ngayNhap", sach.NgayNhap);
+                    cmd.Parameters.AddWithValue("@triGia", sach.TriGia);
                     try
                     {
                         con.Open();
@@ -68,7 +75,7 @@ namespace QLTV_DAL
             return true;
         }
 
-        public bool Sua(Sach sa)
+        public bool Sua(Sach sach)
         {
             string query = string.Empty;
             query += "UPDATE SACH SET [tenSach] = @tenSach, [maLoaiSach] = @maLoaiSach, [maTacGia] = @maTacGia, [namXuatBan] = @namXuatBan, ";
@@ -81,13 +88,13 @@ namespace QLTV_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@maSach", sa.MaSach);
-                    cmd.Parameters.AddWithValue("@tenSach", sa.TenSach);
-                    cmd.Parameters.AddWithValue("@maLoaiSach", sa.LoaiSach);
-                    cmd.Parameters.AddWithValue("@maTacGia", sa.MaTacGia);
-                    cmd.Parameters.AddWithValue("@namXuatBan", sa.NamXuatBan);
-                    cmd.Parameters.AddWithValue("@maNXB", sa.MaNhaXuatBan);
-                    cmd.Parameters.AddWithValue("@triGia", sa.TriGia);
+                    cmd.Parameters.AddWithValue("@maSach", sach.MaSach);
+                    cmd.Parameters.AddWithValue("@tenSach", sach.TenSach);
+                    cmd.Parameters.AddWithValue("@maLoaiSach", sach.LoaiSach);
+                    cmd.Parameters.AddWithValue("@maTacGia", sach.MaTacGia);
+                    cmd.Parameters.AddWithValue("@namXuatBan", sach.NamXuatBan);
+                    cmd.Parameters.AddWithValue("@maNXB", sach.MaNhaXuatBan);
+                    cmd.Parameters.AddWithValue("@triGia", sach.TriGia);
                     try
                     {
                         con.Open();
@@ -105,7 +112,7 @@ namespace QLTV_DAL
             return true;
         }
 
-        public bool Xoa(Sach sa)
+        public bool Xoa(Sach sach)
         {
             string query = string.Empty;
             query += "DELETE FROM [SACH] WHERE [maSach] = @maSach";
@@ -116,7 +123,7 @@ namespace QLTV_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@maSach", sa.MaSach);
+                    cmd.Parameters.AddWithValue("@maSach", sach.MaSach);
                     try
                     {
                         con.Open();

@@ -8,12 +8,19 @@ using System.Threading.Tasks;
 
 namespace QLTV_BUS
 {
+    /* 
+    Program: Quản lí thư viện 
+    Written by: Nguyễn Thành Luân
+    Modified by: Nguyễn Thành Luân 
+    Modified date: 23/05/2019
+    Description: Class mô tả các thuộc tính phương thức cần thiết của loại sách (lớp bussiness)
+    */
     public class LoaiSachBUS
     {
-        private LoaiSachDAL loaiSDal;
+        private LoaiSachDAL loaiSachDal;
         public LoaiSachBUS()
         {
-            loaiSDal = new LoaiSachDAL();
+            loaiSachDal = new LoaiSachDAL();
         }
         //public bool Them(Sach loaiS)
         //{
@@ -23,7 +30,7 @@ namespace QLTV_BUS
 
         public List<LoaiSach> Select()
         {
-            return loaiSDal.Select();
+            return loaiSachDal.Select();
         }
     }
 }

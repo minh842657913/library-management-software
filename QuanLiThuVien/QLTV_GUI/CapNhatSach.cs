@@ -12,10 +12,17 @@ using System.Windows.Forms;
 
 namespace QLTV_GUI
 {
+    /* 
+    Program: Quản lí thư viện 
+    Written by: Nguyễn Song Luân
+    Modified by: Nguyễn Thành Luân 
+    Modified date: 23/05/2019
+    Description: Class mô tả thực hiện cập nhật sách
+    */
     public partial class CapNhatSach : Form
     {
-        private SachBUS saBus;
-        private LoaiSachBUS loaiSBus;
+        private SachBUS sachBus;
+        private LoaiSachBUS loaiSachBus;
 
         public CapNhatSach()
         {
@@ -24,25 +31,25 @@ namespace QLTV_GUI
 
         private void CapNhatSach_Load(object sender, EventArgs e)
         {
-            saBus = new SachBUS();
-            loaiSBus = new LoaiSachBUS();
+            sachBus = new SachBUS();
+            loaiSachBus = new LoaiSachBUS();
             Load_LoaiSach_Combobox();
         }
 
         private void bt_capNhat_Click(object sender, EventArgs e)
         {
             //Lay du lieu tu GUI
-            Sach sa = new Sach();
-            sa.MaSach = tb_maSach.Text;
-            sa.TenSach = tb_tenSach.Text;
-            sa.LoaiSach = cb_theLoai.Text;
-            sa.MaTacGia = tb_tacGia.Text;
-            sa.NamXuatBan = int.Parse(tb_namXuatBan.Text);
-            sa.MaNhaXuatBan = tb_nhaXuatBan.Text;
-            sa.TriGia = int.Parse(tb_triGia.Text);
+            Sach sach = new Sach();
+            sach.MaSach = tb_maSach.Text;
+            sach.TenSach = tb_tenSach.Text;
+            sach.LoaiSach = cb_theLoai.Text;
+            sach.MaTacGia = tb_tacGia.Text;
+            sach.NamXuatBan = int.Parse(tb_namXuatBan.Text);
+            sach.MaNhaXuatBan = tb_nhaXuatBan.Text;
+            sach.TriGia = int.Parse(tb_triGia.Text);
 
             //Them vao database
-            bool kq = saBus.Sua(sa);
+            bool kq = sachBus.Sua(sach);
             if (kq == false)
                 MessageBox.Show("Cập nhật sách thất bại. Vui lòng kiểm tra lại dũ liệu");
             else
@@ -51,7 +58,7 @@ namespace QLTV_GUI
 
         private void Load_LoaiSach_Combobox()
         {
-            List<LoaiSach> listLoaiSach = loaiSBus.Select();
+            List<LoaiSach> listLoaiSach = loaiSachBus.Select();
 
             if (listLoaiSach == null)
             {
