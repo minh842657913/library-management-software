@@ -16,7 +16,7 @@ namespace QLTV_GUI
     Program: Quản lí thư viện 
     Written by: Nguyễn Song Luân
     Modified by: Nguyễn Thành Luân 
-    Modified date: 23/05/2019
+    Modified date: 24/06/2019
     Description: Class mô tả thực hiện cập nhật sách
     */
     public partial class CapNhatSach : Form
@@ -76,6 +76,11 @@ namespace QLTV_GUI
             {
                 cb_theLoai.SelectedIndex = 0;
             }
+        }
+
+        private void bt_thoat_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

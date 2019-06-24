@@ -106,7 +106,7 @@ create table PHIEUTRA
 
 create table THONGTINNO	/*Chua them du lieu vao bang*/
 (
-	maTTN		char(5) primary key,
+	maTTN		char(8) primary key,
 	maDocGia	char(8)	foreign key (maDocGia)
 						references DOCGIA (maDocGia),
 	tongNo		money
@@ -114,7 +114,7 @@ create table THONGTINNO	/*Chua them du lieu vao bang*/
 
 create table THONGTINPHAT	/*Chua them du lieu vao bang*/
 (
-	maPhat		char(5) primary key,
+	maPhat		char(8) primary key,
 	maPhieuTra	char(8)	foreign key (maPhieuTra)
 						references PHIEUTRA (maPhieuTra),
 	tienPhatKyNay		money,
@@ -126,7 +126,7 @@ create table PHIEUTHUTIENPHAT /*Chua them du lieu vao bang*/
 	maPTTP		char(8) primary key,
 	maDocGia	char(8)	foreign key (maDocGia)
 						references DOCGIA (maDocGia),
-	maTTN		char(5)	foreign key	(maTTN)
+	maTTN		char(8)	foreign key	(maTTN)
 						references THONGTINNO (maTTN),
 	soTienThu			money,
 	soTienConLai		money
@@ -161,27 +161,6 @@ create table BAOCAOTRATRE		/*Chua them du lieu vao bang*/
 	soNgayTraTre		int,
 	ngay		smalldatetime
 )
-
-create table TAIKHOAN		/*Chua them du lieu vao bang*/
-(
-	tenTaiKhoan	char(20) primary key,
-	matKhau		char(20)
-)
-
----------------------------- Dieu kien cac rang buoc cua cac bang
-create table QUYDINHTUOI	/*Chua them du lieu vao bang*/
-(
-	maQDT		char(5) primary key,
-	tuoiToiThieu		int,
-	tuoiToiDa			int
-)
-
-create table TIENPHAT		/*Chua them du lieu vao bang*/
-(
-	maTienPhat		char(5) primary key,
-	tienPhatMotNgay	money
-)
-
 ----------------------------
 
 insert into LOAIDOCGIA(maLoaiDG, loaiDG) values ('LDG01', N'Thường')
@@ -219,5 +198,23 @@ insert into PHIEUMUON(maPhieuMuon, maDocGia, maSach, maTacGia, ngayMuon) values 
 
 insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR001', 'DG001', 'SA002', 'PM003', null, null, 0)
 insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR002', 'DG002', 'SA002', 'PM002', null, null, 0)
+
+insert into THONGTINNO(maTTN, maDocGia, tongNo) values ('TTN001', 'DG001', null)
+insert into THONGTINNO(maTTN, maDocGia, tongNo) values ('TTN002', 'DG003', null)
+
+insert into THONGTINPHAT(maPhat, maPhieuTra, tienPhatKyNay, tienNoKyNay) values ('PHAT001', 'PTR001', 4000, 2000)
+insert into THONGTINPHAT(maPhat, maPhieuTra, tienPhatKyNay, tienNoKyNay) values ('PHAT002', 'PTR002', 6000, 3000)
+
+insert into PHIEUTHUTIENPHAT(maPTTP, maDocGia, maTTN, soTienThu, soTienConLai) values ('PTTP001', 'DG001', 'TTN001', 6000, 0)
+insert into PHIEUTHUTIENPHAT(maPTTP, maDocGia, maTTN, soTienThu, soTienConLai) values ('PTTP002', 'DG003', 'TTN002', 6000, 3000)
+
+insert into BAOCAOMUONSACH(maBCMuon, maLoaiSach, thang, soLuotMuon, tiLe) values ('BCM001', 'TLS01', 7, 30, 21.75)
+insert into BAOCAOMUONSACH(maBCMuon, maLoaiSach, thang, soLuotMuon, tiLe) values ('BCM002', 'TLS02', 7, 24, 16)
+
+insert into TONGLUOTMUON(maTLM, maBCMuon, tongLuotMuon) values ('TLM01', 'BCM001', 30)
+insert into TONGLUOTMUON(maTLM, maBCMuon, tongLuotMuon) values ('TLM02', 'BCM002', 16)
+
+insert into BAOCAOTRATRE(maBCTra, maSach, maPhieuMuon, soNgayTraTre, ngay) values ('BCTR001', 'SA001', 'PM001', 3, '23/05/2019')
+insert into BAOCAOTRATRE(maBCTra, maSach, maPhieuMuon, soNgayTraTre, ngay) values ('BCTR002', 'SA002', 'PM002', 3, '23/05/2019')
 
 ----

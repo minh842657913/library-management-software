@@ -18,13 +18,13 @@ namespace QLTV_GUI
     Program: Quản lí thư viện 
     Written by: Nguyễn Song Luân
     Modified by: Nguyễn Thành Luân 
-    Modified date: 23/05/2019
+    Modified date: 24/06/2019
     Description: Class mô tả thực hiện nhập sách mới
     */
     public partial class NhapSachMoi : Form
     {
         private SachBUS sachBus;
-        private LoaiSachBUS loaiSBus;
+        private LoaiSachBUS loaiSachBus;
         private DateTime now = DateTime.Now;
 
         public NhapSachMoi()
@@ -70,7 +70,7 @@ namespace QLTV_GUI
         private void NhapSachMoi_Load(object sender, EventArgs e)
         {
             sachBus = new SachBUS();
-            loaiSBus = new LoaiSachBUS();
+            loaiSachBus = new LoaiSachBUS();
             Load_LoaiSach_Combobox();
             //Đưa thời gian hiện tại vào textbox           
             tb_ngayNhap.Text = now.ToString("yyyy-MM-dd hh:mm:ss");
@@ -78,7 +78,7 @@ namespace QLTV_GUI
 
         private void Load_LoaiSach_Combobox()
         {
-            List<LoaiSach> listLoaiSach = loaiSBus.Select();
+            List<LoaiSach> listLoaiSach = loaiSachBus.Select();
 
             if (listLoaiSach == null)
             {
@@ -96,6 +96,11 @@ namespace QLTV_GUI
             {
                 cb_theLoai.SelectedIndex = 0;
             }
+        }
+
+        private void bt_thoat_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
