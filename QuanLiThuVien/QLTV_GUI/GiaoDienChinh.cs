@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLTV_DAL;
+using QLTV_BUS;
+using QLTV_DTO;
 
 namespace QLTV_GUI
 {
     public partial class GiaoDienChinh : Form
     {
+        private SachBUS sachBUS = new SachBUS();
+
+        //--------------------
+
         public GiaoDienChinh()
         {
             InitializeComponent();
@@ -100,6 +107,38 @@ namespace QLTV_GUI
             formBaoCaoTheLoai.Show();
         }
 
+        private void bt_timKiem_Click(object sender, EventArgs e)
+        {
+            string strTuKhoa = tb_timKiem.Text.Trim();
+            if (strTuKhoa == null || strTuKhoa == string.Empty || strTuKhoa.Length == 0)
+            {
+                List<Sach> listSach = sachBUS.Select();
+                this.DataToGridView(listSach);
+            }
+            else
+            {
+                List<Sach> listSach = sachBUS.SelectByKeyword(strTuKhoa);
+                this.DataToGridView(listSach);
+            }
+        }
+
+        private void DataToGridView(List<Sach> listSach)
+        {
+            if (listSach == null)
+            {
+                MessageBox.Show("Không có sách cần tìm, hoặc có lỗi trong quá trình lấy dữ liệu từ DB");
+                return;
+            }
+
+            dt_bangSach.DataSource = null;
+
+            dt_bangSach.AutoGenerateColumns = false;
+            dt_bangSach.AllowUserToAddRows = false;
+            dt_bangSach.DataSource = listSach;
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dt_bangSach.DataSource];
+            myCurrencyManager.Refresh();
+        }
 
     }
 }

@@ -31,7 +31,7 @@ namespace QLTV_GUI
             Sach sa = new Sach();
             sa.MaSach = tb_maSach.Text;
             sa.TenSach = tb_tenSach.Text;
-            sa.LoaiSach = cb_theLoai.Text;
+            sa.MaLoaiSach = cb_theLoai.Text;
             sa.MaTacGia = tb_tacGia.Text;
             sa.NamXuatBan = int.Parse(tb_namXuatBan.Text);
             sa.MaNhaXuatBan = tb_nhaXuatBan.Text;

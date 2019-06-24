@@ -1,1 +1,1 @@
-SQLCMD -S DESKTOP-BQVQP6H -E -i QuanLiThuVienSQL.sql
+SQLCMD -S . -E -i QuanLiThuVienSQL.sql
