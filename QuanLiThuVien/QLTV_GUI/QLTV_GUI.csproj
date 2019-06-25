@@ -227,7 +227,18 @@
     <None Include="Resources\password.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bg_Login.jpg" />
+    <ProjectReference Include="..\QLTV_BUS\QLTV_BUS.csproj">
+      <Project>{fbb235d6-2e00-4587-ad79-d92e2ee3b326}</Project>
+      <Name>QLTV_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV_DAL\QLTV_DAL.csproj">
+      <Project>{b624a186-3fdd-4003-aac5-6f9db1b7e8ef}</Project>
+      <Name>QLTV_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV_DTO\QLTV_DTO.csproj">
+      <Project>{904e831c-c97a-4a82-900b-d1b4bed11b95}</Project>
+      <Name>QLTV_DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

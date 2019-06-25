@@ -10,29 +10,41 @@ namespace QLTV_BUS
 {
     public class SachBUS
     {
-        private SachDAL saDal;
+        //---------
+
+        private SachDAL sachDAL;
 
         public SachBUS()
         {
-            saDal = new SachDAL();
+            sachDAL = new SachDAL();
         }
 
         public bool Them(Sach sa)
         {
-            bool re = saDal.Them(sa);
+            bool re = sachDAL.Them(sa);
             return re;
         }
 
         public bool Sua(Sach sa)
         {
-            bool re = saDal.Sua(sa);
+            bool re = sachDAL.Sua(sa);
             return re;
         }
 
         public bool Xoa(Sach sa)
         {
-            bool re = saDal.Xoa(sa);
+            bool re = sachDAL.Xoa(sa);
             return re;
+        }
+
+        public List<Sach> Select()
+        {
+            return sachDAL.Select();
+        }
+
+        public List<Sach> SelectByKeyword(string strTuKhoa)
+        {
+            return sachDAL.SelectByKeyword(strTuKhoa);
         }
     }
 }

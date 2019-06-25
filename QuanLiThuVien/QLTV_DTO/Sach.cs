@@ -10,11 +10,19 @@ namespace QLTV_DTO
     {
         string maSach;
         string tenSach;
+
+        string maLoaiSach;
         string loaiSach;
+
         string maTacGia;
+        string tacGia;
+
         string maNhaXuatBan;
+        string nhaXuatBan;
+
         int namXuatBan;
         string ngayNhap;
+        int soLuongTon;
         double triGia;
 
         public string MaSach
@@ -40,6 +48,19 @@ namespace QLTV_DTO
             set
             {
                 tenSach = value;
+            }
+        }
+
+        public string MaLoaiSach
+        {
+            get
+            {
+                return maLoaiSach;
+            }
+
+            set
+            {
+                maLoaiSach = value;
             }
         }
 
@@ -69,6 +90,19 @@ namespace QLTV_DTO
             }
         }
 
+        public string TacGia
+        {
+            get
+            {
+                return tacGia;
+            }
+
+            set
+            {
+                tacGia = value;
+            }
+        }
+
         public string MaNhaXuatBan
         {
             get
@@ -79,6 +113,19 @@ namespace QLTV_DTO
             set
             {
                 maNhaXuatBan = value;
+            }
+        }
+
+        public string NhaXuatBan
+        {
+            get
+            {
+                return nhaXuatBan;
+            }
+
+            set
+            {
+                nhaXuatBan = value;
             }
         }
 
@@ -120,5 +167,18 @@ namespace QLTV_DTO
                 triGia = value;
             }
         }
+
+        public int SoLuongTon
+        {
+            get
+            {
+                return soLuongTon;
+            }
+
+            set
+            {
+                soLuongTon = value;
+            }
+        } 
     }
 }
