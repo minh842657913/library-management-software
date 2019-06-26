@@ -229,3 +229,15 @@ SELECT [maSach], [tenSach], [LOAISACH].[theLoai], [TACGIA].[tentacGia], [namXuat
 FROM [QuanLiThuVien].[dbo].[SACH], [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[TACGIA], [QuanLiThuVien].[dbo].[NHAXUATBAN]
 WHERE ([LOAISACH].[maLoaiSach] = [SACH].[maLoaiSach] AND [TACGIA].[maTacGia] = [SACH].[maTacGia] AND [NHAXUATBAN].[maNXB] = [SACH].[maNXB])
 */
+
+
+/*
+SELECT [LOAISACH].[theLoai], COUNT([theLoai]) AS soLuotMuon
+FROM [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH]
+WHERE ([PHIEUMUON].[maSach] = [SACH].[maSach] AND [SACH].[maLoaiSach] = [LOAISACH].[maLoaiSach] and MONTH([ngayMuon]) = '01')
+GROUP BY [theLoai]
+
+SELECT COUNT(*) AS tongLuotMuon
+FROM [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH]
+WHERE ([PHIEUMUON].[maSach] = [SACH].[maSach] AND [SACH].[maLoaiSach] = [LOAISACH].[maLoaiSach])
+*/
