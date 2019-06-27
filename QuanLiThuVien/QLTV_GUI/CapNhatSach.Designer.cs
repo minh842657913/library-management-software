@@ -63,6 +63,7 @@
             this.bt_thoat.TabIndex = 95;
             this.bt_thoat.Text = "THOÁT";
             this.bt_thoat.UseVisualStyleBackColor = false;
+            this.bt_thoat.Click += new System.EventHandler(this.bt_thoat_Click);
             // 
             // bt_capNhat
             // 

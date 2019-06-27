@@ -9,6 +9,13 @@ using System.Data.SqlClient;
 
 namespace QLTV_DAL
 {
+    /* 
+    Program: Quản lí thư viện 
+    Written by: Nguyễn Thành Luân
+    Modified by: Nguyễn Thành Luân 
+    Modified date: 24/06/2019
+    Description: Class mô tả các thuộc tính phương thức cần thiết của loại sách (lớp liên kết dữ liệu)
+    */
     public class LoaiSachDAL
     {
         private string connectionString;
@@ -37,7 +44,7 @@ namespace QLTV_DAL
             query += "SELECT [maLoaiSach], [theLoai]";
             query += "FROM [LOAISACH]";
 
-            List<LoaiSach> lsLoaiSach = new List<LoaiSach>();
+            List<LoaiSach> listLoaiSach = new List<LoaiSach>();
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -57,10 +64,10 @@ namespace QLTV_DAL
                         {
                             while (reader.Read())
                             {
-                                LoaiSach lSa = new LoaiSach();
-                                lSa.MaLoaiSach = reader["maLoaiSach"].ToString();
-                                lSa.TheLoai = reader["theLoai"].ToString();                             
-                                lsLoaiSach.Add(lSa);
+                                LoaiSach loaiSach = new LoaiSach();
+                                loaiSach.MaLoaiSach = reader["maLoaiSach"].ToString();
+                                loaiSach.TheLoai = reader["theLoai"].ToString();                             
+                                listLoaiSach.Add(loaiSach);
                             }
                         }
 
@@ -74,7 +81,7 @@ namespace QLTV_DAL
                     }
                 }
             }
-            return lsLoaiSach;
+            return listLoaiSach;
         }
 
     }

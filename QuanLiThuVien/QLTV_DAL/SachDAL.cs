@@ -9,6 +9,13 @@ using System.Data.SqlClient;
 
 namespace QLTV_DAL
 {
+    /* 
+    Program: Quản lí thư viện 
+    Written by: Nguyễn Thành Luân
+    Modified by: Nguyễn Thành Luân 
+    Modified date: 22/06/2019
+    Description: Class mô tả các thuộc tính phương thức cần thiết của sách (lớp liên kết dữ liệu)
+    */
     public class SachDAL
     {
         private string connectionString;
@@ -35,7 +42,7 @@ namespace QLTV_DAL
         {
             string query = string.Empty;
             query += "INSERT INTO [SACH] ([maSach], [tenSach], [maLoaiSach], [maTacGia], [namXuatBan], [maNXB], [ngayNhap], [soLuongTon], [triGia])";
-            query += "VALUES (@maSach, @tenSach, @maLoaiSach, @maTacGia, @namXuatBan, @maNXB, @ngayNhap, @triGia)";
+            query += "VALUES (@maSach, @tenSach, @maLoaiSach, @maTacGia, @namXuatBan, @maNXB, @ngayNhap,@soLuongTon, @triGia)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand())
@@ -43,6 +50,7 @@ namespace QLTV_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
+
                     cmd.Parameters.AddWithValue("@maSach", sach.MaSach);
                     cmd.Parameters.AddWithValue("@tenSach", sach.TenSach);
                     cmd.Parameters.AddWithValue("@maLoaiSach", sach.MaLoaiSach);
