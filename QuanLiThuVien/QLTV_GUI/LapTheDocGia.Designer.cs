@@ -35,7 +35,7 @@
             this.tb_ngayLapThe = new System.Windows.Forms.TextBox();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.tb_diaChi = new System.Windows.Forms.TextBox();
-            this.tx_ngaySinh = new System.Windows.Forms.TextBox();
+            this.tb_ngaySinh = new System.Windows.Forms.TextBox();
             this.tb_hoTenDocGia = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -79,6 +79,7 @@
             this.bt_taoThe.TabIndex = 62;
             this.bt_taoThe.Text = "TẠO THẺ";
             this.bt_taoThe.UseVisualStyleBackColor = false;
+            this.bt_taoThe.Click += new System.EventHandler(this.Bt_taoThe_Click);
             // 
             // cb_LoaiDocGia
             // 
@@ -109,12 +110,12 @@
             this.tb_diaChi.Size = new System.Drawing.Size(280, 20);
             this.tb_diaChi.TabIndex = 58;
             // 
-            // tx_ngaySinh
+            // tb_ngaySinh
             // 
-            this.tx_ngaySinh.Location = new System.Drawing.Point(385, 108);
-            this.tx_ngaySinh.Name = "tx_ngaySinh";
-            this.tx_ngaySinh.Size = new System.Drawing.Size(160, 20);
-            this.tx_ngaySinh.TabIndex = 57;
+            this.tb_ngaySinh.Location = new System.Drawing.Point(385, 108);
+            this.tb_ngaySinh.Name = "tb_ngaySinh";
+            this.tb_ngaySinh.Size = new System.Drawing.Size(160, 20);
+            this.tb_ngaySinh.TabIndex = 57;
             // 
             // tb_hoTenDocGia
             // 
@@ -177,7 +178,7 @@
             this.label1.TabIndex = 50;
             this.label1.Text = "Họ và tên độc giả:";
             // 
-            // TaoTheDocGia
+            // LapTheDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,7 +190,7 @@
             this.Controls.Add(this.tb_ngayLapThe);
             this.Controls.Add(this.tb_email);
             this.Controls.Add(this.tb_diaChi);
-            this.Controls.Add(this.tx_ngaySinh);
+            this.Controls.Add(this.tb_ngaySinh);
             this.Controls.Add(this.tb_hoTenDocGia);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -199,8 +200,9 @@
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(700, 350);
             this.MinimumSize = new System.Drawing.Size(700, 350);
-            this.Name = "TaoTheDocGia";
+            this.Name = "LapTheDocGia";
             this.Text = "Tạo thẻ độc giả";
+            this.Load += new System.EventHandler(this.LapTheDocGia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,7 +217,7 @@
         private System.Windows.Forms.TextBox tb_ngayLapThe;
         private System.Windows.Forms.TextBox tb_email;
         private System.Windows.Forms.TextBox tb_diaChi;
-        private System.Windows.Forms.TextBox tx_ngaySinh;
+        private System.Windows.Forms.TextBox tb_ngaySinh;
         private System.Windows.Forms.TextBox tb_hoTenDocGia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

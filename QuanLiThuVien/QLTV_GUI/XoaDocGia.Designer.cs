@@ -58,6 +58,7 @@
             this.bt_xoa.TabIndex = 2;
             this.bt_xoa.Text = "Xóa";
             this.bt_xoa.UseVisualStyleBackColor = true;
+            this.bt_xoa.Click += new System.EventHandler(this.Bt_xoa_Click);
             // 
             // label2
             // 
@@ -82,6 +83,7 @@
             this.MinimumSize = new System.Drawing.Size(352, 238);
             this.Name = "XoaDocGia";
             this.Text = "Xóa độc giả";
+            this.Load += new System.EventHandler(this.XoaDocGia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

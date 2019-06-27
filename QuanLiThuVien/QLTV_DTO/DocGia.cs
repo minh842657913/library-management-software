@@ -78,5 +78,17 @@ namespace QLTV_DTO
                 ngaySinh = value;
             }
         }
+        public DateTime NgayLapThe
+        {
+            get
+            {
+                return NgayLapThe;
+            }
+
+            set
+            {
+                NgayLapThe = value;
+            }
+        }
     }
 }

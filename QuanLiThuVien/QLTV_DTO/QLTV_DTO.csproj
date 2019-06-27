@@ -40,15 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoTraTre.cs" />
     <Compile Include="DocGia.cs" />
     <Compile Include="LoaiDocGia.cs" />
     <Compile Include="LoaiSach.cs" />
     <Compile Include="NhaXuatBan.cs" />
+    <Compile Include="PhieuMuon.cs" />
+    <Compile Include="PhieuThuTienPhat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sach.cs" />
     <Compile Include="TacGia.cs" />
     <Compile Include="TheDocGia.cs" />
-    <Compile Include="TheLoaiTK.cs" />
+    <Compile Include="ThongTinNo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

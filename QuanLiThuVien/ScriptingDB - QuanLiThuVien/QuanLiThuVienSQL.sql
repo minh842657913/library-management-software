@@ -8,7 +8,7 @@ BEGIN
     FROM MASTER..SysProcesses
     WHERE DBId = DB_ID(N'QuanLiThuVien') AND SPId <> @@SPId
     EXEC(@SQL)
-    DROP DATABASE [QLTC]
+    DROP DATABASE [QuanLiThuVien]
 END
 go
 
@@ -75,7 +75,6 @@ create table SACH
 	maNXB		char(5)	foreign key	(maNXB)
 						references NHAXUATBAN (maNXB),
 	ngayNhap	smalldatetime,
-	soLuongTon	int,
 	triGia		money
 )
 
@@ -211,8 +210,8 @@ insert into THEDOCGIA(maThe, maDocGia, maLoaiDG, ngayLapThe, hanThe) values ('TH
 insert into THEDOCGIA(maThe, maDocGia, maLoaiDG, ngayLapThe, hanThe) values ('THE002', 'DG002', 'LDG01', '12/12/2016', null)
 insert into THEDOCGIA(maThe, maDocGia, maLoaiDG, ngayLapThe, hanThe) values ('THE003', 'DG003', 'LDG02', '25/06/2015', null)
 
-insert into SACH(maSach, tenSach, maLoaiSach, maTacGia, namXuatBan, maNXB, ngayNhap, soLuongTon, triGia) values ('SA001', N'Tên sách 01', 'TLS02', 'TG003', '2008', 'NXB04', '12/01/2009', 10, 29000)
-insert into SACH(maSach, tenSach, maLoaiSach, maTacGia, namXuatBan, maNXB, ngayNhap, soLuongTon, triGia) values ('SA002', N'Tên sách 02', 'TLS03', 'TG003', '2010', 'NXB04', '21/12/2010', 10, 36000)
+insert into SACH(maSach, tenSach, maLoaiSach, maTacGia, namXuatBan, maNXB, ngayNhap, triGia) values ('SA001', N'Tên sách 01', 'TLS02', 'TG003', '2008', 'NXB04', '12/01/2009', 29000)
+insert into SACH(maSach, tenSach, maLoaiSach, maTacGia, namXuatBan, maNXB, ngayNhap, triGia) values ('SA002', N'Tên sách 02', 'TLS03', 'TG003', '2010', 'NXB04', '21/12/2010', 36000)
 
 insert into PHIEUMUON(maPhieuMuon, maDocGia, maSach, maTacGia, ngayMuon) values ('PM001', 'DG002', 'SA001', 'TG003', '01/01/2017')
 insert into PHIEUMUON(maPhieuMuon, maDocGia, maSach, maTacGia, ngayMuon) values ('PM002', 'DG002', 'SA002', 'TG003', '01/01/2017')
@@ -222,22 +221,3 @@ insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayM
 insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR002', 'DG002', 'SA002', 'PM002', null, null, 0)
 
 ----
-
-
-/*
-SELECT [maSach], [tenSach], [LOAISACH].[theLoai], [TACGIA].[tentacGia], [namXuatBan], [NHAXUATBAN].[tenNXB], [ngayNhap], [soLuongTon], [triGia]
-FROM [QuanLiThuVien].[dbo].[SACH], [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[TACGIA], [QuanLiThuVien].[dbo].[NHAXUATBAN]
-WHERE ([LOAISACH].[maLoaiSach] = [SACH].[maLoaiSach] AND [TACGIA].[maTacGia] = [SACH].[maTacGia] AND [NHAXUATBAN].[maNXB] = [SACH].[maNXB])
-*/
-
-
-/*
-SELECT [LOAISACH].[theLoai], COUNT([theLoai]) AS soLuotMuon
-FROM [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH]
-WHERE ([PHIEUMUON].[maSach] = [SACH].[maSach] AND [SACH].[maLoaiSach] = [LOAISACH].[maLoaiSach] and MONTH([ngayMuon]) = '01')
-GROUP BY [theLoai]
-
-SELECT COUNT(*) AS tongLuotMuon
-FROM [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH]
-WHERE ([PHIEUMUON].[maSach] = [SACH].[maSach] AND [SACH].[maLoaiSach] = [LOAISACH].[maLoaiSach])
-*/

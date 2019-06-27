@@ -80,6 +80,7 @@
             this.bt_capNhat.TabIndex = 77;
             this.bt_capNhat.Text = "CẬP NHẬT";
             this.bt_capNhat.UseVisualStyleBackColor = false;
+            this.bt_capNhat.Click += new System.EventHandler(this.Bt_capNhat_Click);
             // 
             // cb_LoaiDocGia
             // 
@@ -214,6 +215,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 350);
             this.Name = "CapNhatDocGia";
             this.Text = "Cập nhật thông tin độc giả";
+            this.Load += new System.EventHandler(this.CapNhatDocGia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

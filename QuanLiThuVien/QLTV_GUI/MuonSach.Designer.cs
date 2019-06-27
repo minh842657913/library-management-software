@@ -266,7 +266,7 @@
             this.MaximumSize = new System.Drawing.Size(1028, 500);
             this.MinimumSize = new System.Drawing.Size(1028, 500);
             this.Name = "MuonSach";
-            this.Text = "Mượn sách";
+            this.Text = "7";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

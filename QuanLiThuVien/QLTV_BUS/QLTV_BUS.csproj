@@ -40,10 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocGiaBUS.cs" />
+    <Compile Include="LoaiDocGiaBUS.cs" />
     <Compile Include="LoaiSachBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachBUS.cs" />
-    <Compile Include="TheLoaiTKBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLTV_DAL\QLTV_DAL.csproj">
