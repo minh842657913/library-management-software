@@ -77,6 +77,12 @@
     <Compile Include="CapNhatSach.Designer.cs">
       <DependentUpon>CapNhatSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="rp_BaoCaoTraTre_Ngay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_BaoCaoTraTre_Ngay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     <Compile Include="LapTheDocGia.Designer.cs">
       <DependentUpon>LapTheDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="rp_BaoCaoTraTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rp_BaoCaoTraTre.Designer.cs">
+      <DependentUpon>rp_BaoCaoTraTre.cs</DependentUpon>
+    </Compile>
     <Compile Include="rp_MuonTheLoai_Thang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,6 +175,10 @@
     <EmbeddedResource Include="CapNhatSach.resx">
       <DependentUpon>CapNhatSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rp_BaoCaoTraTre_Ngay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_BaoCaoTraTre_Ngay.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +209,9 @@
     </Compile>
     <EmbeddedResource Include="LapTheDocGia.resx">
       <DependentUpon>LapTheDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rp_BaoCaoTraTre.resx">
+      <DependentUpon>rp_BaoCaoTraTre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rp_MuonTheLoai_Thang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

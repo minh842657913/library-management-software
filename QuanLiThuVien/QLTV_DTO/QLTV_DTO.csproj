@@ -49,6 +49,7 @@
     <Compile Include="TacGia.cs" />
     <Compile Include="TheDocGia.cs" />
     <Compile Include="TheLoaiTK.cs" />
+    <Compile Include="TraTreTK.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

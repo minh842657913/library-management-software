@@ -1,6 +1,6 @@
 ﻿namespace QLTV_GUI
 {
-    partial class rp_MuonTheoTheLoai
+    partial class rp_BaoCaoTraTre
     {
         /// <summary>
         /// Required designer variable.
@@ -39,18 +39,18 @@
             this.cr_Viewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cr_Viewer.Location = new System.Drawing.Point(0, 0);
             this.cr_Viewer.Name = "cr_Viewer";
-            this.cr_Viewer.Size = new System.Drawing.Size(1064, 598);
+            this.cr_Viewer.Size = new System.Drawing.Size(996, 443);
             this.cr_Viewer.TabIndex = 0;
             // 
-            // rp_MuonTheoTheLoai
+            // rp_BaoCaoTraTre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 598);
+            this.ClientSize = new System.Drawing.Size(996, 443);
             this.Controls.Add(this.cr_Viewer);
-            this.Name = "rp_MuonTheoTheLoai";
-            this.Text = "Báo cáo mượn theo thể loại";
-            this.Load += new System.EventHandler(this.rp_MuonTheoTheLoai_Load);
+            this.Name = "rp_BaoCaoTraTre";
+            this.Text = "Báo cáo trả trễ";
+            this.Load += new System.EventHandler(this.rp_BaoCaoTraTre_Load);
             this.ResumeLayout(false);
 
         }

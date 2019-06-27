@@ -28,60 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoNgayTraTre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tb_ngay = new System.Windows.Forms.TextBox();
+            this.dgv_TraTre = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.bt_thoat = new System.Windows.Forms.Button();
             this.bt_xacNhan = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtp_Ngay = new System.Windows.Forms.DateTimePicker();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoNgayTraTre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TraTre)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_TraTre
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_TraTre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TraTre.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.TenSach,
             this.NgayMuon,
             this.SoNgayTraTre});
-            this.dataGridView1.Location = new System.Drawing.Point(45, 102);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(594, 186);
-            this.dataGridView1.TabIndex = 55;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // TenSach
-            // 
-            this.TenSach.HeaderText = "Tên Sách";
-            this.TenSach.Name = "TenSach";
-            this.TenSach.Width = 200;
-            // 
-            // NgayMuon
-            // 
-            this.NgayMuon.HeaderText = "Ngày Mượn";
-            this.NgayMuon.Name = "NgayMuon";
-            // 
-            // SoNgayTraTre
-            // 
-            this.SoNgayTraTre.HeaderText = "Số Ngày Trả Trễ";
-            this.SoNgayTraTre.Name = "SoNgayTraTre";
-            this.SoNgayTraTre.Width = 150;
-            // 
-            // tb_ngay
-            // 
-            this.tb_ngay.Location = new System.Drawing.Point(312, 66);
-            this.tb_ngay.Name = "tb_ngay";
-            this.tb_ngay.Size = new System.Drawing.Size(145, 20);
-            this.tb_ngay.TabIndex = 54;
+            this.dgv_TraTre.Location = new System.Drawing.Point(45, 102);
+            this.dgv_TraTre.Name = "dgv_TraTre";
+            this.dgv_TraTre.Size = new System.Drawing.Size(594, 186);
+            this.dgv_TraTre.TabIndex = 55;
             // 
             // label1
             // 
@@ -114,6 +85,7 @@
             this.bt_thoat.TabIndex = 57;
             this.bt_thoat.Text = "THOÁT";
             this.bt_thoat.UseVisualStyleBackColor = false;
+            this.bt_thoat.Click += new System.EventHandler(this.bt_thoat_Click);
             // 
             // bt_xacNhan
             // 
@@ -126,14 +98,52 @@
             this.bt_xacNhan.TabIndex = 56;
             this.bt_xacNhan.Text = "XÁC NHẬN";
             this.bt_xacNhan.UseVisualStyleBackColor = false;
+            this.bt_xacNhan.Click += new System.EventHandler(this.bt_xacNhan_Click);
+            // 
+            // dtp_Ngay
+            // 
+            this.dtp_Ngay.CustomFormat = "dd/MM/yyyy";
+            this.dtp_Ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_Ngay.Location = new System.Drawing.Point(309, 66);
+            this.dtp_Ngay.Name = "dtp_Ngay";
+            this.dtp_Ngay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dtp_Ngay.Size = new System.Drawing.Size(111, 20);
+            this.dtp_Ngay.TabIndex = 58;
+            this.dtp_Ngay.ValueChanged += new System.EventHandler(this.dtp_Ngay_ValueChanged);
+            // 
+            // STT
+            // 
+            this.STT.DataPropertyName = "Stt";
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên Sách";
+            this.TenSach.Name = "TenSach";
+            this.TenSach.Width = 200;
+            // 
+            // NgayMuon
+            // 
+            this.NgayMuon.DataPropertyName = "NgayMuon";
+            this.NgayMuon.HeaderText = "Ngày Mượn";
+            this.NgayMuon.Name = "NgayMuon";
+            // 
+            // SoNgayTraTre
+            // 
+            this.SoNgayTraTre.DataPropertyName = "SoNgayTraTre";
+            this.SoNgayTraTre.HeaderText = "Số Ngày Trả Trễ";
+            this.SoNgayTraTre.Name = "SoNgayTraTre";
+            this.SoNgayTraTre.Width = 150;
             // 
             // BaoCaoTraTre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.tb_ngay);
+            this.Controls.Add(this.dtp_Ngay);
+            this.Controls.Add(this.dgv_TraTre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bt_thoat);
@@ -142,7 +152,8 @@
             this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "BaoCaoTraTre";
             this.Text = "Báo cáo trả trễ";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.dtp_Ngay_ValueChanged);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TraTre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,15 +161,15 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoNgayTraTre;
-        private System.Windows.Forms.TextBox tb_ngay;
+        private System.Windows.Forms.DataGridView dgv_TraTre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button bt_thoat;
         private System.Windows.Forms.Button bt_xacNhan;
+        private System.Windows.Forms.DateTimePicker dtp_Ngay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoNgayTraTre;
     }
 }

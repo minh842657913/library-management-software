@@ -204,6 +204,7 @@ namespace QLTV_DAL
 
             strQuery += " AND (([maSach] LIKE CONCAT('%',@strTuKhoa,'%'))";
             strQuery += " OR ([tenSach] LIKE CONCAT('%',@strTuKhoa,'%'))";
+            strQuery += " OR ([theLoai] LIKE CONCAT('%',@strTuKhoa,'%'))";
             strQuery += " OR ([tenTacGia] LIKE CONCAT('%',@strTuKhoa,'%')))";
 
             List<Sach> listSach = new List<Sach>();
