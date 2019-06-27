@@ -38,11 +38,12 @@ namespace QLTV_GUI
             Sach sach = new Sach();
             sach.MaSach = tb_maSach.Text;
             sach.TenSach = tb_tenSach.Text;
-            sach.LoaiSach = cb_theLoai.Text;
+            sach.MaLoaiSach = cb_theLoai.Text;
             sach.MaTacGia = tb_tacGia.Text;
             sach.NamXuatBan = int.Parse(tb_namXuatBan.Text);
             sach.MaNhaXuatBan = tb_nhaXuatBan.Text;
             sach.TriGia = int.Parse(tb_triGia.Text);
+            sach.SoLuongTon = int.Parse(tb_soLuong.Text);
             sach.NgayNhap = tb_ngayNhap.Text;
 
             Console.Write(sach.NgayNhap);

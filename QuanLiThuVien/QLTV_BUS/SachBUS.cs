@@ -29,21 +29,21 @@ namespace QLTV_BUS
 
         public bool Them(Sach sach)
         {
-            bool re = sachDAL.Them(sa);
+            bool re = sachDAL.Them(sach);
 
             return re;
         }
 
         public bool Sua(Sach sach)
         {
-            bool re = sachDAL.Sua(sa);
+            bool re = sachDAL.Sua(sach);
 
             return re;
         }
 
         public bool Xoa(Sach sach)
         {
-            bool re = sachDAL.Xoa(sa);
+            bool re = sachDAL.Xoa(sach);
 
             return re;
         }
