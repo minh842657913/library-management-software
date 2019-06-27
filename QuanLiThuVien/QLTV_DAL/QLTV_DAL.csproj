@@ -47,6 +47,7 @@
     <Compile Include="SachDAL.cs" />
     <Compile Include="TacGiaDAL.cs" />
     <Compile Include="TheLoaiTKDAL.cs" />
+    <Compile Include="TraTreTKDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLTV_DTO\QLTV_DTO.csproj">

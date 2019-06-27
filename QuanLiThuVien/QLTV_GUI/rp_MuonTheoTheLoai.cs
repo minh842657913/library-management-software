@@ -35,7 +35,7 @@ namespace QLTV_GUI
             
         }
 
-        private void SetParameters(string strThangNgay, int intTongLuotMuon)
+        private void SetParameters(string strThang, int intTongLuotMuon)
         {
             ParameterFields From = new ParameterFields();
             ParameterField time = new ParameterField();
@@ -43,7 +43,7 @@ namespace QLTV_GUI
 
             time.Name = "strThangNam";
             ParameterDiscreteValue timeVal = new ParameterDiscreteValue();
-            timeVal.Value = strThangNgay;
+            timeVal.Value = strThang;
             time.CurrentValues.Add(timeVal);
             From.Add(time);
 

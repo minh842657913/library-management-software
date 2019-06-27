@@ -8,7 +8,7 @@ BEGIN
     FROM MASTER..SysProcesses
     WHERE DBId = DB_ID(N'QuanLiThuVien') AND SPId <> @@SPId
     EXEC(@SQL)
-    DROP DATABASE [QLTC]
+    DROP DATABASE [QuanLiThuVien]
 END
 go
 
@@ -218,20 +218,20 @@ insert into PHIEUMUON(maPhieuMuon, maDocGia, maSach, maTacGia, ngayMuon) values 
 insert into PHIEUMUON(maPhieuMuon, maDocGia, maSach, maTacGia, ngayMuon) values ('PM002', 'DG002', 'SA002', 'TG003', '01/01/2017')
 insert into PHIEUMUON(maPhieuMuon, maDocGia, maSach, maTacGia, ngayMuon) values ('PM003', 'DG001', 'SA002', 'TG003', '02/04/2017')
 
-insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR001', 'DG001', 'SA002', 'PM003', null, null, 0)
-insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR002', 'DG002', 'SA002', 'PM002', null, null, 0)
+insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR001', 'DG001', 'SA002', 'PM003', '12/6/2017', null, 0)
+insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR002', 'DG002', 'SA002', 'PM002', '12/5/2017', null, 0)
 
 ----
 
 
-/*
+/*tra cuu sach 
 SELECT [maSach], [tenSach], [LOAISACH].[theLoai], [TACGIA].[tentacGia], [namXuatBan], [NHAXUATBAN].[tenNXB], [ngayNhap], [soLuongTon], [triGia]
 FROM [QuanLiThuVien].[dbo].[SACH], [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[TACGIA], [QuanLiThuVien].[dbo].[NHAXUATBAN]
 WHERE ([LOAISACH].[maLoaiSach] = [SACH].[maLoaiSach] AND [TACGIA].[maTacGia] = [SACH].[maTacGia] AND [NHAXUATBAN].[maNXB] = [SACH].[maNXB])
 */
 
 
-/*
+/*bao cao muon sach theo thang
 SELECT [LOAISACH].[theLoai], COUNT([theLoai]) AS soLuotMuon
 FROM [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH]
 WHERE ([PHIEUMUON].[maSach] = [SACH].[maSach] AND [SACH].[maLoaiSach] = [LOAISACH].[maLoaiSach] and MONTH([ngayMuon]) = '01')
@@ -240,4 +240,10 @@ GROUP BY [theLoai]
 SELECT COUNT(*) AS tongLuotMuon
 FROM [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH]
 WHERE ([PHIEUMUON].[maSach] = [SACH].[maSach] AND [SACH].[maLoaiSach] = [LOAISACH].[maLoaiSach])
+*/
+
+/*Bao cao tra tre (ngay)
+SELECT [tenSach], [ngayMuon], [ngayTra], CONVERT(int,[ngayTra]) - CONVERT(int,[ngayMuon]) AS [soNgayMuon]
+FROM [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH], [QuanLiThuVien].[dbo].[PHIEUTRA]
+WHERE [PHIEUMUON].[maSach] = [SACH].[maSach] AND [PHIEUMUON].[maPhieuMuon] = [PHIEUTRA].[maPhieuMuon]
 */
