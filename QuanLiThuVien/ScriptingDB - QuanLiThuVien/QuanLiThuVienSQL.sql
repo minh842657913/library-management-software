@@ -202,8 +202,8 @@ insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayM
 ----
 
 
-insert into THONGTINNO(maTTN, maDocGia, tongNo) values ('TTN001', 'DG001', null)
-insert into THONGTINNO(maTTN, maDocGia, tongNo) values ('TTN002', 'DG003', null)
+insert into THONGTINNO(maTTN, maDocGia, tongNo) values ('TTN001', 'DG001', 20000)
+insert into THONGTINNO(maTTN, maDocGia, tongNo) values ('TTN002', 'DG003', 0)
 
 insert into THONGTINPHAT(maPhat, maPhieuTra, tienPhatKyNay, tienNoKyNay) values ('PHAT001', 'PTR001', 4000, 2000)
 insert into THONGTINPHAT(maPhat, maPhieuTra, tienPhatKyNay, tienNoKyNay) values ('PHAT002', 'PTR002', 6000, 3000)
@@ -247,3 +247,4 @@ SELECT [tenSach], [ngayMuon], [ngayTra], CONVERT(int,[ngayTra]) - CONVERT(int,[n
 FROM [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH], [QuanLiThuVien].[dbo].[PHIEUTRA]
 WHERE [PHIEUMUON].[maSach] = [SACH].[maSach] AND [PHIEUMUON].[maPhieuMuon] = [PHIEUTRA].[maPhieuMuon]
 */
+

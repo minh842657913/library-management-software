@@ -53,6 +53,7 @@
             this.bt_thoat.TabIndex = 70;
             this.bt_thoat.Text = "THOÁT";
             this.bt_thoat.UseVisualStyleBackColor = false;
+            this.bt_thoat.Click += new System.EventHandler(this.bt_thoat_Click);
             // 
             // bt_xacNhan
             // 
@@ -65,11 +66,13 @@
             this.bt_xacNhan.TabIndex = 69;
             this.bt_xacNhan.Text = "XÁC NHẬN";
             this.bt_xacNhan.UseVisualStyleBackColor = false;
+            this.bt_xacNhan.Click += new System.EventHandler(this.bt_xacNhan_Click);
             // 
             // tb_conLai
             // 
             this.tb_conLai.Location = new System.Drawing.Point(473, 112);
             this.tb_conLai.Name = "tb_conLai";
+            this.tb_conLai.ReadOnly = true;
             this.tb_conLai.Size = new System.Drawing.Size(162, 20);
             this.tb_conLai.TabIndex = 68;
             // 
@@ -88,6 +91,8 @@
             this.tb_soTienThu.Name = "tb_soTienThu";
             this.tb_soTienThu.Size = new System.Drawing.Size(162, 20);
             this.tb_soTienThu.TabIndex = 66;
+            this.tb_soTienThu.TextChanged += new System.EventHandler(this.tb_soTienThu_TextChanged);
+            this.tb_soTienThu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_soTienThu_KeyPress);
             // 
             // label3
             // 
@@ -144,10 +149,11 @@
             // cb_hoTenDocGia
             // 
             this.cb_hoTenDocGia.FormattingEnabled = true;
-            this.cb_hoTenDocGia.Location = new System.Drawing.Point(105, 69);
+            this.cb_hoTenDocGia.Location = new System.Drawing.Point(165, 69);
             this.cb_hoTenDocGia.Name = "cb_hoTenDocGia";
-            this.cb_hoTenDocGia.Size = new System.Drawing.Size(263, 21);
+            this.cb_hoTenDocGia.Size = new System.Drawing.Size(203, 21);
             this.cb_hoTenDocGia.TabIndex = 71;
+            this.cb_hoTenDocGia.SelectedIndexChanged += new System.EventHandler(this.cb_hoTenDocGia_SelectedIndexChanged);
             // 
             // PhieuThuTienPhat
             // 

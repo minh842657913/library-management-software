@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocGiaPDAL.cs" />
     <Compile Include="LoaiSachDAL.cs" />
     <Compile Include="NhaXuatBanDAL.cs" />
+    <Compile Include="PhieuPhatDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachDAL.cs" />
     <Compile Include="TacGiaDAL.cs" />

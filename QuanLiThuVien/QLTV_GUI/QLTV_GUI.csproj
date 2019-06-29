@@ -77,6 +77,18 @@
     <Compile Include="CapNhatSach.Designer.cs">
       <DependentUpon>CapNhatSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="pp_PhieuPhat_.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pp_PhieuPhat_.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="pp_PhieuThuTienPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pp_PhieuThuTienPhat.Designer.cs">
+      <DependentUpon>pp_PhieuThuTienPhat.cs</DependentUpon>
+    </Compile>
     <Compile Include="rp_BaoCaoTraTre_Ngay.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,6 +186,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatSach.resx">
       <DependentUpon>CapNhatSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pp_PhieuPhat_.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>pp_PhieuPhat_.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pp_PhieuThuTienPhat.resx">
+      <DependentUpon>pp_PhieuThuTienPhat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rp_BaoCaoTraTre_Ngay.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
