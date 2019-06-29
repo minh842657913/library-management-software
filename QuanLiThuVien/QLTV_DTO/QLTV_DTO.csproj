@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DocGia.cs" />
+    <Compile Include="DocGiaP.cs" />
     <Compile Include="LoaiDocGia.cs" />
     <Compile Include="LoaiSach.cs" />
     <Compile Include="NhaXuatBan.cs" />
+    <Compile Include="PhieuPhat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sach.cs" />
     <Compile Include="TacGia.cs" />
