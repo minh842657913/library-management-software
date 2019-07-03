@@ -95,6 +95,7 @@
             this.tb_maSach.Name = "tb_maSach";
             this.tb_maSach.Size = new System.Drawing.Size(110, 20);
             this.tb_maSach.TabIndex = 92;
+            this.tb_maSach.TextChanged += new System.EventHandler(this.tb_maSach_TextChanged);
             // 
             // label10
             // 

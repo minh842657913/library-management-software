@@ -267,5 +267,57 @@ namespace QLTV_DAL
             return listSach;
 
         }
+        public List<Sach> TaiDuLieu()
+        {
+            string query = string.Empty;
+            query += "SELECT *";
+            query += "FROM [SACH]";
+            List<Sach> listSach = new List<Sach>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    try
+                    {
+                        con.Open();
+
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                Sach sach = new Sach();
+
+                                sach.MaSach = reader["maSach"].ToString();
+                                sach.TenSach = reader["tenSach"].ToString();
+                                sach.MaLoaiSach = reader["maLoaiSach"].ToString();
+                                sach.MaTacGia = reader["maTacGia"].ToString();
+                                sach.NamXuatBan = int.Parse(reader["namXuatBan"].ToString());
+                                sach.MaNhaXuatBan = reader["maNXB"].ToString();
+                                sach.NgayNhap = reader["ngayNhap"].ToString();
+                                sach.SoLuongTon = int.Parse(reader["soLuongTon"].ToString());
+                                sach.TriGia = double.Parse(reader["triGia"].ToString());
+
+                                listSach.Add(sach);
+                            }
+                        }
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return listSach;
+        }
     }
 }

@@ -247,4 +247,3 @@ SELECT [tenSach], [ngayMuon], [ngayTra], CONVERT(int,[ngayTra]) - CONVERT(int,[n
 FROM [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH], [QuanLiThuVien].[dbo].[PHIEUTRA]
 WHERE [PHIEUMUON].[maSach] = [SACH].[maSach] AND [PHIEUMUON].[maPhieuMuon] = [PHIEUTRA].[maPhieuMuon]
 */
-

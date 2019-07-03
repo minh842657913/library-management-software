@@ -78,6 +78,35 @@ namespace QLTV_GUI
             }
         }
 
+        /* 
+        Description: Sử dụng mã sách để hiện thông tin của sách. 
+        Written by: Nguyễn Thành Luân
+        Modified by: Nguyễn Thành Luân 
+        */
+        private void tb_maSach_TextChanged(object sender, EventArgs e)
+        {
+            List<Sach> listSach = new List<Sach>();
+
+            listSach = sachBus.TaiDuLieu();
+
+            foreach (var sach in listSach)
+            {
+                //Cắt khoảng trắng ở đầu và sau chuỗi MaSach
+                sach.MaSach = sach.MaSach.Trim();
+
+                if (tb_maSach.Text == sach.MaSach) /*Nếu textbox mã sách = 1 mã sách trong CSDL thì hiện thông tin sách lên*/
+                {
+                    tb_tenSach.Text = sach.TenSach;
+                    cb_theLoai.Text = sach.MaLoaiSach;
+                    tb_tacGia.Text = sach.MaTacGia;
+                    tb_namXuatBan.Text = sach.NamXuatBan.ToString();
+                    tb_nhaXuatBan.Text = sach.MaNhaXuatBan;
+                    tb_soLuong.Text = sach.SoLuongTon.ToString();
+                    tb_triGia.Text = sach.TriGia.ToString();
+                }
+            }
+        }
+
         private void bt_thoat_Click(object sender, EventArgs e)
         {
             Close();

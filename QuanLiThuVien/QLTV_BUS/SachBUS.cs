@@ -57,5 +57,10 @@ namespace QLTV_BUS
         {
             return sachDAL.SelectByKeyword(strTuKhoa);
         }
+
+        public List<Sach> TaiDuLieu()
+        {
+            return sachDAL.TaiDuLieu();
+        }
     }
 }
