@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CA89CA1-A222-4709-8EB8-510BCF8541FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLTV_GUI</RootNamespace>
+    <AssemblyName>QLTV_GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoCaoMuonTheoTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoMuonTheoTheLoai.Designer.cs">
+      <DependentUpon>BaoCaoMuonTheoTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoTraTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoTraTre.Designer.cs">
+      <DependentUpon>BaoCaoTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatDocGia.Designer.cs">
+      <DependentUpon>CapNhatDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatSach.Designer.cs">
+      <DependentUpon>CapNhatSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rp_BaoCaoTraTre_Ngay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_BaoCaoTraTre_Ngay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDienChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDienChinh.Designer.cs">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GioiThieu.Designer.cs">
+      <DependentUpon>GioiThieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuonSach.Designer.cs">
+      <DependentUpon>MuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapSachMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapSachMoi.Designer.cs">
+      <DependentUpon>NhapSachMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThuTienPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuThuTienPhat.Designer.cs">
+      <DependentUpon>PhieuThuTienPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LapTheDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LapTheDocGia.Designer.cs">
+      <DependentUpon>LapTheDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rp_BaoCaoTraTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rp_BaoCaoTraTre.Designer.cs">
+      <DependentUpon>rp_BaoCaoTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rp_MuonTheLoai_Thang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_MuonTheLoai_Thang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rp_MuonTheoTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rp_MuonTheoTheLoai.Designer.cs">
+      <DependentUpon>rp_MuonTheoTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraSach.Designer.cs">
+      <DependentUpon>TraSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaDocGia.Designer.cs">
+      <DependentUpon>XoaDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaSach.Designer.cs">
+      <DependentUpon>XoaSach.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaoCaoMuonTheoTheLoai.resx">
+      <DependentUpon>BaoCaoMuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoTraTre.resx">
+      <DependentUpon>BaoCaoTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatDocGia.resx">
+      <DependentUpon>CapNhatDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatSach.resx">
+      <DependentUpon>CapNhatSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rp_BaoCaoTraTre_Ngay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_BaoCaoTraTre_Ngay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDienChinh.resx">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GioiThieu.resx">
+      <DependentUpon>GioiThieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuonSach.resx">
+      <DependentUpon>MuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapSachMoi.resx">
+      <DependentUpon>NhapSachMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThuTienPhat.resx">
+      <DependentUpon>PhieuThuTienPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="LapTheDocGia.resx">
+      <DependentUpon>LapTheDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rp_BaoCaoTraTre.resx">
+      <DependentUpon>rp_BaoCaoTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rp_MuonTheLoai_Thang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_MuonTheLoai_Thang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rp_MuonTheoTheLoai.resx">
+      <DependentUpon>rp_MuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraSach.resx">
+      <DependentUpon>TraSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaDocGia.resx">
+      <DependentUpon>XoaDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaSach.resx">
+      <DependentUpon>XoaSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TiepNhanSach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLTV_BUS\QLTV_BUS.csproj">
+      <Project>{fbb235d6-2e00-4587-ad79-d92e2ee3b326}</Project>
+      <Name>QLTV_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV_DAL\QLTV_DAL.csproj">
+      <Project>{b624a186-3fdd-4003-aac5-6f9db1b7e8ef}</Project>
+      <Name>QLTV_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV_DTO\QLTV_DTO.csproj">
+      <Project>{904e831c-c97a-4a82-900b-d1b4bed11b95}</Project>
+      <Name>QLTV_DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+    <Content Include="Resources\Account.png" />
+    <Content Include="Resources\bg_Login.jpg" />
+    <Content Include="Resources\password.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -76,8 +76,8 @@ namespace QLTV_GUI
 
         private void bt_dangNhap_Click(object sender, EventArgs e)
         {
-            if (tb_taiKhoan.Text == "" || tb_taiKhoan.Text == "Tài khoản"
-                || tb_matKhau.Text == "" || tb_matKhau.Text == "Mật khẩu")
+            if (tb_taiKhoan.Text == "" || tb_taiKhoan.Text == "Tài khoản" ||
+                tb_matKhau.Text == "" || tb_matKhau.Text == "Mật khẩu")
             {
                 return;
             }

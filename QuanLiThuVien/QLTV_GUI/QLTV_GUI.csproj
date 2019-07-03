@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +76,12 @@
     </Compile>
     <Compile Include="CapNhatSach.Designer.cs">
       <DependentUpon>CapNhatSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rp_BaoCaoTraTre_Ngay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_BaoCaoTraTre_Ngay.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
@@ -114,6 +127,24 @@
     <Compile Include="LapTheDocGia.Designer.cs">
       <DependentUpon>LapTheDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="rp_BaoCaoTraTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rp_BaoCaoTraTre.Designer.cs">
+      <DependentUpon>rp_BaoCaoTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rp_MuonTheLoai_Thang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_MuonTheLoai_Thang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rp_MuonTheoTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rp_MuonTheoTheLoai.Designer.cs">
+      <DependentUpon>rp_MuonTheoTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="TraSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +174,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatSach.resx">
       <DependentUpon>CapNhatSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rp_BaoCaoTraTre_Ngay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_BaoCaoTraTre_Ngay.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -175,6 +210,16 @@
     <EmbeddedResource Include="LapTheDocGia.resx">
       <DependentUpon>LapTheDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rp_BaoCaoTraTre.resx">
+      <DependentUpon>rp_BaoCaoTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rp_MuonTheLoai_Thang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_MuonTheLoai_Thang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rp_MuonTheoTheLoai.resx">
+      <DependentUpon>rp_MuonTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TraSach.resx">
       <DependentUpon>TraSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,7 +240,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\book.png" />
@@ -225,7 +272,24 @@
     <None Include="Resources\password.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bg_Login.jpg" />
+    <ProjectReference Include="..\QLTV_BUS\QLTV_BUS.csproj">
+      <Project>{fbb235d6-2e00-4587-ad79-d92e2ee3b326}</Project>
+      <Name>QLTV_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV_DAL\QLTV_DAL.csproj">
+      <Project>{b624a186-3fdd-4003-aac5-6f9db1b7e8ef}</Project>
+      <Name>QLTV_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV_DTO\QLTV_DTO.csproj">
+      <Project>{904e831c-c97a-4a82-900b-d1b4bed11b95}</Project>
+      <Name>QLTV_DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+    <Content Include="Resources\Account.png" />
+    <Content Include="Resources\bg_Login.jpg" />
+    <Content Include="Resources\password.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
