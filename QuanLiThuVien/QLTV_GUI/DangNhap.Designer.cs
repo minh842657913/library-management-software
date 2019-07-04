@@ -58,6 +58,7 @@
             // 
             // bt_dangNhap
             // 
+            this.bt_dangNhap.AutoEllipsis = true;
             this.bt_dangNhap.BackColor = System.Drawing.Color.DarkCyan;
             this.bt_dangNhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_dangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -96,6 +97,7 @@
             // 
             // DangNhap
             // 
+            this.AcceptButton = this.bt_dangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -110,7 +112,8 @@
             this.MinimumSize = new System.Drawing.Size(490, 270);
             this.Name = "DangNhap";
             this.ShowIcon = false;
-            this.Text = "Đăng nhập";
+            this.Text = "Đăng nhập";           
+            this.Load += new System.EventHandler(this.DangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_matKhau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_taiKhoan)).EndInit();
             this.ResumeLayout(false);

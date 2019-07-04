@@ -1,0 +1,11 @@
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\bin\Debug\QLTV_BUS.dll
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\bin\Debug\QLTV_BUS.pdb
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\bin\Debug\QLTV_DAL.dll
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\bin\Debug\QLTV_DTO.dll
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\bin\Debug\QLTV_DAL.pdb
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\bin\Debug\QLTV_DTO.pdb
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\obj\Debug\QLTV_BUS.csprojAssemblyReference.cache
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\obj\Debug\QLTV_BUS.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\obj\Debug\QLTV_BUS.csproj.CopyComplete
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\obj\Debug\QLTV_BUS.dll
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_BUS\obj\Debug\QLTV_BUS.pdb

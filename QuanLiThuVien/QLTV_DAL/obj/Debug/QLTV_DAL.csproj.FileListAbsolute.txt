@@ -1,0 +1,9 @@
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DAL\bin\Debug\QLTV_DAL.dll
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DAL\bin\Debug\QLTV_DAL.pdb
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DAL\bin\Debug\QLTV_DTO.dll
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DAL\bin\Debug\QLTV_DTO.pdb
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DAL\obj\Debug\QLTV_DAL.csprojAssemblyReference.cache
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DAL\obj\Debug\QLTV_DAL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DAL\obj\Debug\QLTV_DAL.csproj.CopyComplete
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DAL\obj\Debug\QLTV_DAL.dll
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DAL\obj\Debug\QLTV_DAL.pdb

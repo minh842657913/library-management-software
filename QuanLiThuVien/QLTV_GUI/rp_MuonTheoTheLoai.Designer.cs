@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(1064, 598);
             this.Controls.Add(this.cr_Viewer);
             this.Name = "rp_MuonTheoTheLoai";
-            this.Text = "Báo cáo mượn theo thể loại";
+            this.Text = "rp_MuonTheoTheLoai";
             this.Load += new System.EventHandler(this.rp_MuonTheoTheLoai_Load);
             this.ResumeLayout(false);
 

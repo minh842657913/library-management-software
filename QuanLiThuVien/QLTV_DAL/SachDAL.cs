@@ -9,13 +9,6 @@ using System.Data.SqlClient;
 
 namespace QLTV_DAL
 {
-    /* 
-    Program: Quản lí thư viện 
-    Written by: Nguyễn Thành Luân
-    Modified by: Nguyễn Thành Luân 
-    Modified date: 22/06/2019
-    Description: Class mô tả các thuộc tính phương thức cần thiết của sách (lớp liên kết dữ liệu)
-    */
     public class SachDAL
     {
         private string connectionString;
@@ -42,7 +35,7 @@ namespace QLTV_DAL
         {
             string query = string.Empty;
             query += "INSERT INTO [SACH] ([maSach], [tenSach], [maLoaiSach], [maTacGia], [namXuatBan], [maNXB], [ngayNhap], [soLuongTon], [triGia])";
-            query += "VALUES (@maSach, @tenSach, @maLoaiSach, @maTacGia, @namXuatBan, @maNXB, @ngayNhap,@soLuongTon, @triGia)";
+            query += "VALUES (@maSach, @tenSach, @maLoaiSach, @maTacGia, @namXuatBan, @maNXB, @ngayNhap, @triGia)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand())
@@ -50,7 +43,6 @@ namespace QLTV_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-
                     cmd.Parameters.AddWithValue("@maSach", sach.MaSach);
                     cmd.Parameters.AddWithValue("@tenSach", sach.TenSach);
                     cmd.Parameters.AddWithValue("@maLoaiSach", sach.MaLoaiSach);
@@ -212,7 +204,6 @@ namespace QLTV_DAL
 
             strQuery += " AND (([maSach] LIKE CONCAT('%',@strTuKhoa,'%'))";
             strQuery += " OR ([tenSach] LIKE CONCAT('%',@strTuKhoa,'%'))";
-            strQuery += " OR ([theLoai] LIKE CONCAT('%',@strTuKhoa,'%'))";
             strQuery += " OR ([tenTacGia] LIKE CONCAT('%',@strTuKhoa,'%')))";
 
             List<Sach> listSach = new List<Sach>();
@@ -266,58 +257,6 @@ namespace QLTV_DAL
             }
             return listSach;
 
-        }
-        public List<Sach> TaiDuLieu()
-        {
-            string query = string.Empty;
-            query += "SELECT *";
-            query += "FROM [SACH]";
-            List<Sach> listSach = new List<Sach>();
-
-            using (SqlConnection con = new SqlConnection(ConnectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = con;
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = query;
-                    try
-                    {
-                        con.Open();
-
-                        SqlDataReader reader = null;
-                        reader = cmd.ExecuteReader();
-
-                        if (reader.HasRows == true)
-                        {
-                            while (reader.Read())
-                            {
-                                Sach sach = new Sach();
-
-                                sach.MaSach = reader["maSach"].ToString();
-                                sach.TenSach = reader["tenSach"].ToString();
-                                sach.MaLoaiSach = reader["maLoaiSach"].ToString();
-                                sach.MaTacGia = reader["maTacGia"].ToString();
-                                sach.NamXuatBan = int.Parse(reader["namXuatBan"].ToString());
-                                sach.MaNhaXuatBan = reader["maNXB"].ToString();
-                                sach.NgayNhap = reader["ngayNhap"].ToString();
-                                sach.SoLuongTon = int.Parse(reader["soLuongTon"].ToString());
-                                sach.TriGia = double.Parse(reader["triGia"].ToString());
-
-                                listSach.Add(sach);
-                            }
-                        }
-                        con.Close();
-                        con.Dispose();
-                    }
-                    catch (Exception ex)
-                    {
-                        con.Close();
-                        return null;
-                    }
-                }
-            }
-            return listSach;
         }
     }
 }

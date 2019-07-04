@@ -37,10 +37,6 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -80,24 +76,6 @@
     </Compile>
     <Compile Include="CapNhatSach.Designer.cs">
       <DependentUpon>CapNhatSach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pp_PhieuPhat_.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>pp_PhieuPhat_.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="pp_PhieuThuTienPhat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pp_PhieuThuTienPhat.Designer.cs">
-      <DependentUpon>pp_PhieuThuTienPhat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="rp_BaoCaoTraTre_Ngay.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rp_BaoCaoTraTre_Ngay.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
@@ -143,12 +121,6 @@
     <Compile Include="LapTheDocGia.Designer.cs">
       <DependentUpon>LapTheDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="rp_BaoCaoTraTre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="rp_BaoCaoTraTre.Designer.cs">
-      <DependentUpon>rp_BaoCaoTraTre.cs</DependentUpon>
-    </Compile>
     <Compile Include="rp_MuonTheLoai_Thang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,19 +163,6 @@
     <EmbeddedResource Include="CapNhatSach.resx">
       <DependentUpon>CapNhatSach.cs</DependentUpon>
     </EmbeddedResource>
-
-    <EmbeddedResource Include="pp_PhieuPhat_.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>pp_PhieuPhat_.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pp_PhieuThuTienPhat.resx">
-      <DependentUpon>pp_PhieuThuTienPhat.cs</DependentUpon>
-    </EmbeddedResource>
-
-    <EmbeddedResource Include="rp_BaoCaoTraTre_Ngay.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rp_BaoCaoTraTre_Ngay.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,9 +193,6 @@
     </Compile>
     <EmbeddedResource Include="LapTheDocGia.resx">
       <DependentUpon>LapTheDocGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="rp_BaoCaoTraTre.resx">
-      <DependentUpon>rp_BaoCaoTraTre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rp_MuonTheLoai_Thang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -312,9 +268,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
-    <Content Include="Resources\Account.png" />
-    <Content Include="Resources\bg_Login.jpg" />
-    <Content Include="Resources\password.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

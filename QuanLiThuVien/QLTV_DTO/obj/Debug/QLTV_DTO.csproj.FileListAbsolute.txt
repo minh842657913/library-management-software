@@ -1,0 +1,6 @@
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DTO\bin\Debug\QLTV_DTO.dll
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DTO\bin\Debug\QLTV_DTO.pdb
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.dll
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.pdb
+C:\Users\Administrator\Downloads\library-management-software-develop\library-management-software-develop\QuanLiThuVien\QLTV_DTO\obj\Debug\QLTV_DTO.csprojAssemblyReference.cache
