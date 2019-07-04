@@ -63,7 +63,6 @@
             this.bt_thoat.TabIndex = 95;
             this.bt_thoat.Text = "THOÁT";
             this.bt_thoat.UseVisualStyleBackColor = false;
-            this.bt_thoat.Click += new System.EventHandler(this.bt_thoat_Click);
             // 
             // bt_capNhat
             // 
@@ -95,7 +94,6 @@
             this.tb_maSach.Name = "tb_maSach";
             this.tb_maSach.Size = new System.Drawing.Size(110, 20);
             this.tb_maSach.TabIndex = 92;
-            this.tb_maSach.TextChanged += new System.EventHandler(this.tb_maSach_TextChanged);
             // 
             // label10
             // 

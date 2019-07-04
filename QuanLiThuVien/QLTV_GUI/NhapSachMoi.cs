@@ -14,18 +14,11 @@ using System.Data.SqlClient;
 
 namespace QLTV_GUI
 {
-    /* 
-    Program: Quản lí thư viện 
-    Written by: Nguyễn Song Luân
-    Modified by: Nguyễn Thành Luân 
-    Modified date: 24/06/2019
-    Description: Class mô tả thực hiện nhập sách mới
-    */
     public partial class NhapSachMoi : Form
     {
-        private SachBUS sachBus;
-        private LoaiSachBUS loaiSachBus;
-        private DateTime now = DateTime.Now;
+        private SachBUS saBus;
+        private LoaiSachBUS loaiSBus;
+        CultureInfo viVN = new CultureInfo("vi-Vn"); //Lấy kiểu văn hóa thời gian theo VN
 
         public NhapSachMoi()
         {
@@ -35,51 +28,44 @@ namespace QLTV_GUI
         private void bt_nhapSach_Click(object sender, EventArgs e)
         {
             //- Lay du lieu tu gui xuong
-            Sach sach = new Sach();
-            sach.MaSach = tb_maSach.Text;
-            sach.TenSach = tb_tenSach.Text;
-            sach.MaLoaiSach = cb_theLoai.Text;
-            sach.MaTacGia = tb_tacGia.Text;
-            sach.NamXuatBan = int.Parse(tb_namXuatBan.Text);
-            sach.MaNhaXuatBan = tb_nhaXuatBan.Text;
-            sach.TriGia = int.Parse(tb_triGia.Text);
-            sach.SoLuongTon = int.Parse(tb_soLuong.Text);
-            sach.NgayNhap = tb_ngayNhap.Text;
+            Sach sa = new Sach();
+            sa.MaSach = tb_maSach.Text;
+            sa.TenSach = tb_tenSach.Text;
+            sa.MaLoaiSach = cb_theLoai.Text;
+            sa.MaTacGia = tb_tacGia.Text;
+            sa.NamXuatBan = int.Parse(tb_namXuatBan.Text);
+            sa.MaNhaXuatBan = tb_nhaXuatBan.Text;
+            sa.TriGia = int.Parse(tb_triGia.Text);
+            sa.NgayNhap = tb_ngayNhap.Text;
 
-            Console.Write(sach.NgayNhap);
+            Console.Write(sa.NgayNhap);
             //- kiemm tra du lieu nhap
-            if (sach.NamXuatBan > now.Year)
-            {
 
-                MessageBox.Show("Năm xuất bản lớn hơn ngày nhập !");
+            // Them vao data base
+            bool kq = saBus.Them(sa);
+            if (kq == false)
+            {
+                MessageBox.Show("Thêm sách mới thất bại. Vui lòng kiểm tra lại dữ liệu.");
             }
             else
             {
-                // Them vao data base
-                bool kq = sachBus.Them(sach);
-                if (kq == false)
-                {
-                    MessageBox.Show("Thêm sách mới thất bại. Vui lòng kiểm tra lại dữ liệu.");
-                }
-                else
-                {
-                    MessageBox.Show("Thêm sách mới thành công! ");
-                }
-            }          
+                MessageBox.Show("Thêm sách mới thành công! ");
+            }
         }
 
         private void NhapSachMoi_Load(object sender, EventArgs e)
         {
-            sachBus = new SachBUS();
-            loaiSachBus = new LoaiSachBUS();
+            saBus = new SachBUS();
+            loaiSBus = new LoaiSachBUS();
             Load_LoaiSach_Combobox();
-            //Đưa thời gian hiện tại vào textbox           
-            tb_ngayNhap.Text = now.ToString("yyyy-MM-dd hh:mm:ss");
+            //Đưa thời gian hiện tại vào textbox 
+            DateTime now = DateTime.Now;
+            tb_ngayNhap.Text = now.ToString("d", viVN);
         }
 
         private void Load_LoaiSach_Combobox()
         {
-            List<LoaiSach> listLoaiSach = loaiSachBus.Select();
+            List<LoaiSach> listLoaiSach = loaiSBus.Select();
 
             if (listLoaiSach == null)
             {
@@ -97,11 +83,6 @@ namespace QLTV_GUI
             {
                 cb_theLoai.SelectedIndex = 0;
             }
-        }
-
-        private void bt_thoat_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

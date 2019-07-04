@@ -64,7 +64,6 @@
             this.bt_thoat.TabIndex = 72;
             this.bt_thoat.Text = "THOÁT";
             this.bt_thoat.UseVisualStyleBackColor = false;
-            this.bt_thoat.Click += new System.EventHandler(this.bt_thoat_Click);
             // 
             // bt_nhapSach
             // 
@@ -210,7 +209,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(132, 234);
+            this.label5.Location = new System.Drawing.Point(130, 234);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 54;
@@ -219,7 +218,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(132, 193);
+            this.label4.Location = new System.Drawing.Point(131, 193);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 53;
@@ -228,7 +227,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(132, 153);
+            this.label3.Location = new System.Drawing.Point(131, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 52;
@@ -246,7 +245,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(132, 112);
+            this.label1.Location = new System.Drawing.Point(131, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 50;

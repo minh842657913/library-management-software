@@ -16,20 +16,23 @@ namespace QLTV_GUI
     public partial class GiaoDienChinh : Form
     {
         private SachBUS sachBUS = new SachBUS();
-
+        private DangNhap formDangNhap;
         //--------------------
-
         public GiaoDienChinh()
         {
             InitializeComponent();
-        }
-
+        }        
         private void ms_dangNhap_Click(object sender, EventArgs e)
-        {
-            DangNhap formDangNhap = new DangNhap();
-            formDangNhap.Show();
+        {        
+            using (var form = new DangNhap())
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {                   
+                    enable();                    
+                }          
+            }
         }
-
         private void ms_lapPhieuPhat_Click(object sender, EventArgs e)
         {
             PhieuThuTienPhat formLapPhieuPhat = new PhieuThuTienPhat();
@@ -109,6 +112,7 @@ namespace QLTV_GUI
 
         private void bt_timKiem_Click(object sender, EventArgs e)
         {
+            disable();
             string strTuKhoa = tb_timKiem.Text.Trim();
             if (strTuKhoa == null || strTuKhoa == string.Empty || strTuKhoa.Length == 0)
             {
@@ -140,5 +144,63 @@ namespace QLTV_GUI
             myCurrencyManager.Refresh();
         }
 
+     
+
+        public void disable()
+        {
+
+            ts_lapTheDocGia.Enabled = false;
+            ms_dangXuat.Enabled = false;
+            ms_lapPhieuPhat.Enabled = false;
+            ms_lapBaoCao.Enabled = false;
+            ms_nhapSach.Enabled = true;
+            ms_capNhatSach.Enabled = false;
+            ms_xoaSach.Enabled = false;
+            ms_lapTheDocGia.Enabled = false;
+            ms_capNhatDocGia.Enabled = false;
+            ms_xoaDocGia.Enabled = false;
+            ms_muonSach.Enabled = false;
+            ms_traSach.Enabled = false;
+            ts_lapTheDocGia.Enabled = false;
+            ts_muonSach.Enabled = false;
+            ts_traSach.Enabled = false;
+            ts_nhapSach.Enabled = false;
+            ts_lapPhieuPhat.Enabled = false;
+            ts_baoCao.Enabled = false;
+            lb_dangXuat.Enabled = false;
+            ms_nhapSach.Enabled = false;
+            ms_dangNhap.Enabled = true;
+            lb_tenTaiKhoan.Text = "      Khách    ";
+        }
+        public void enable()
+        {
+
+            ts_lapTheDocGia.Enabled = true;
+            ms_dangXuat.Enabled = true;
+            ms_lapPhieuPhat.Enabled = true;
+            ms_lapBaoCao.Enabled = true;
+            ms_nhapSach.Enabled = true;
+            ms_capNhatSach.Enabled = true;
+            ms_xoaSach.Enabled = true;
+            ms_lapTheDocGia.Enabled = true;
+            ms_capNhatDocGia.Enabled = true;
+            ms_xoaDocGia.Enabled = true;
+            ms_muonSach.Enabled = true;
+            ms_traSach.Enabled = true;
+            ts_lapTheDocGia.Enabled = true;
+            ts_muonSach.Enabled = true;
+            ts_traSach.Enabled = true;
+            ts_nhapSach.Enabled = true;
+            ts_lapPhieuPhat.Enabled = true;
+            ts_baoCao.Enabled = true;
+            lb_dangXuat.Enabled = true;
+            ms_dangNhap.Enabled = false;
+            lb_tenTaiKhoan.Text = "QuảnTrịViên";
+        }
+
+        private void Ms_dangXuat_Click(object sender, EventArgs e)
+        {
+            disable();
+        }
     }
 }

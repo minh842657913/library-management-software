@@ -121,25 +121,26 @@
             // ms_dangNhap
             // 
             this.ms_dangNhap.Name = "ms_dangNhap";
-            this.ms_dangNhap.Size = new System.Drawing.Size(153, 22);
+            this.ms_dangNhap.Size = new System.Drawing.Size(180, 22);
             this.ms_dangNhap.Text = "Đăng nhập";
             this.ms_dangNhap.Click += new System.EventHandler(this.ms_dangNhap_Click);
             // 
             // ms_dangXuat
             // 
             this.ms_dangXuat.Name = "ms_dangXuat";
-            this.ms_dangXuat.Size = new System.Drawing.Size(153, 22);
+            this.ms_dangXuat.Size = new System.Drawing.Size(180, 22);
             this.ms_dangXuat.Text = "Đăng xuất";
+            this.ms_dangXuat.Click += new System.EventHandler(this.Ms_dangXuat_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(150, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // ms_lapPhieuPhat
             // 
             this.ms_lapPhieuPhat.Name = "ms_lapPhieuPhat";
-            this.ms_lapPhieuPhat.Size = new System.Drawing.Size(153, 22);
+            this.ms_lapPhieuPhat.Size = new System.Drawing.Size(180, 22);
             this.ms_lapPhieuPhat.Text = "Lập phiếu phạt";
             this.ms_lapPhieuPhat.Click += new System.EventHandler(this.ms_lapPhieuPhat_Click);
             // 
@@ -149,7 +150,7 @@
             this.ms_baoCaoTraTre,
             this.ms_baoCaoMuonTheLoai});
             this.ms_lapBaoCao.Name = "ms_lapBaoCao";
-            this.ms_lapBaoCao.Size = new System.Drawing.Size(153, 22);
+            this.ms_lapBaoCao.Size = new System.Drawing.Size(180, 22);
             this.ms_lapBaoCao.Text = "Lập báo cáo";
             // 
             // ms_baoCaoTraTre
@@ -169,12 +170,12 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(150, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // ms_thoat
             // 
             this.ms_thoat.Name = "ms_thoat";
-            this.ms_thoat.Size = new System.Drawing.Size(153, 22);
+            this.ms_thoat.Size = new System.Drawing.Size(180, 22);
             this.ms_thoat.Text = "Thoát";
             this.ms_thoat.Click += new System.EventHandler(this.ms_thoat_Click);
             // 
@@ -316,7 +317,7 @@
             this.ts_traSach.Image = global::QLTV_GUI.Properties.Resources.book;
             this.ts_traSach.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ts_traSach.Name = "ts_traSach";
-            this.ts_traSach.Size = new System.Drawing.Size(86, 36);
+            this.ts_traSach.Size = new System.Drawing.Size(85, 36);
             this.ts_traSach.Text = "Trả sách";
             this.ts_traSach.Click += new System.EventHandler(this.ms_traSach_Click);
             // 
@@ -325,7 +326,7 @@
             this.ts_nhapSach.Image = global::QLTV_GUI.Properties.Resources.TiepNhanSach;
             this.ts_nhapSach.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ts_nhapSach.Name = "ts_nhapSach";
-            this.ts_nhapSach.Size = new System.Drawing.Size(147, 36);
+            this.ts_nhapSach.Size = new System.Drawing.Size(146, 36);
             this.ts_nhapSach.Text = "Tiếp nhận sách mới";
             this.ts_nhapSach.Click += new System.EventHandler(this.ms_nhapSach_Click);
             // 

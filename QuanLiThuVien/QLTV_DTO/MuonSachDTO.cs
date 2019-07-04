@@ -6,63 +6,81 @@ using System.Threading.Tasks;
 
 namespace QLTV_DTO
 {
-    public class TraTreTK
-    {
-        private int stt;
-        private string tenSach;
-        private string ngayMuon;
-        private int soNgayTraTre;
+    public class MuonSachDTO
+    {   
 
-        public int Stt
+        private string maDocGia;
+        private string tenDocGia;
+        private string ngayMuon;
+        private string maSach;
+        private string tenSach;
+        private int soLuong;
+        public string MaSach
         {
             get
             {
-                return stt;
+                return maSach;
             }
 
             set
             {
-                stt = value;
+                maSach = value;
             }
         }
-
         public string TenSach
         {
             get
             {
                 return tenSach;
             }
-
             set
             {
                 tenSach = value;
             }
         }
-
+        public int SoLuong
+        {
+            get
+            {
+                return soLuong;
+            }
+            set
+            {
+                soLuong = value;
+            }
+        }
         public string NgayMuon
         {
             get
             {
                 return ngayMuon;
             }
-
             set
             {
                 ngayMuon = value;
             }
         }
-
-        public int SoNgayTraTre
+        public string TenDocGia
         {
             get
             {
-                return soNgayTraTre;
+                return tenDocGia;
             }
-
             set
             {
-                soNgayTraTre = value;
+                tenDocGia = value;
             }
         }
+        public string MaDocGia
+        {
+            get
+            {
+                return maDocGia;
+            }
+            set
+            {
+                maDocGia = value;
+            }
+        }      
     }
 }

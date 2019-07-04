@@ -107,7 +107,7 @@ create table PHIEUTRA
 
 create table THONGTINNO	/*Chua them du lieu vao bang*/
 (
-	maTTN		char(8) primary key,
+	maTTN		char(5) primary key,
 	maDocGia	char(8)	foreign key (maDocGia)
 						references DOCGIA (maDocGia),
 	tongNo		money
@@ -115,7 +115,7 @@ create table THONGTINNO	/*Chua them du lieu vao bang*/
 
 create table THONGTINPHAT	/*Chua them du lieu vao bang*/
 (
-	maPhat		char(8) primary key,
+	maPhat		char(5) primary key,
 	maPhieuTra	char(8)	foreign key (maPhieuTra)
 						references PHIEUTRA (maPhieuTra),
 	tienPhatKyNay		money,
@@ -127,7 +127,7 @@ create table PHIEUTHUTIENPHAT /*Chua them du lieu vao bang*/
 	maPTTP		char(8) primary key,
 	maDocGia	char(8)	foreign key (maDocGia)
 						references DOCGIA (maDocGia),
-	maTTN		char(8)	foreign key	(maTTN)
+	maTTN		char(5)	foreign key	(maTTN)
 						references THONGTINNO (maTTN),
 	soTienThu			money,
 	soTienConLai		money
@@ -161,6 +161,26 @@ create table BAOCAOTRATRE		/*Chua them du lieu vao bang*/
 						references PHIEUMUON (maPhieuMuon),
 	soNgayTraTre		int,
 	ngay		smalldatetime
+)
+
+---------------------------- Dieu kien cac rang buoc cua cac bang
+create table QUYDINHTUOI	/*Chua them du lieu vao bang*/
+(
+	maQDT		char(5) primary key,
+	tuoiToiThieu		int,
+	tuoiToiDa			int
+)
+
+create table TIENPHAT		/*Chua them du lieu vao bang*/
+(
+	maTienPhat		char(5) primary key,
+	tienPhatMotNgay	money
+)
+create table TAIKHOAN
+(
+	maTaiKhoan		varchar(5) primary key,
+	tenTaiKhoan		varchar(12),
+	matKhau			varchar(12)
 )
 ----------------------------
 
@@ -197,41 +217,21 @@ insert into PHIEUMUON(maPhieuMuon, maDocGia, maSach, maTacGia, ngayMuon) values 
 insert into PHIEUMUON(maPhieuMuon, maDocGia, maSach, maTacGia, ngayMuon) values ('PM002', 'DG002', 'SA002', 'TG003', '01/01/2017')
 insert into PHIEUMUON(maPhieuMuon, maDocGia, maSach, maTacGia, ngayMuon) values ('PM003', 'DG001', 'SA002', 'TG003', '02/04/2017')
 
-insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR001', 'DG001', 'SA002', 'PM003', '12/6/2017', null, 0)
-insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR002', 'DG002', 'SA002', 'PM002', '12/5/2017', null, 0)
+insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR001', 'DG001', 'SA002', 'PM003', null, null, 0)
+insert into PHIEUTRA(maPhieuTra, maDocGia, maSach, maPhieuMuon, ngayTra, soNgayMuon, tienPhat) values ('PTR002', 'DG002', 'SA002', 'PM002', null, null, 0)
+
+insert into TAIKHOAN(maTaiKhoan,tenTaiKhoan,matKhau) values ('TK001','admin','admin')
 ----
 
 
-insert into THONGTINNO(maTTN, maDocGia, tongNo) values ('TTN001', 'DG001', 20000)
-insert into THONGTINNO(maTTN, maDocGia, tongNo) values ('TTN002', 'DG003', 0)
-
-insert into THONGTINPHAT(maPhat, maPhieuTra, tienPhatKyNay, tienNoKyNay) values ('PHAT001', 'PTR001', 4000, 2000)
-insert into THONGTINPHAT(maPhat, maPhieuTra, tienPhatKyNay, tienNoKyNay) values ('PHAT002', 'PTR002', 6000, 3000)
-
-insert into PHIEUTHUTIENPHAT(maPTTP, maDocGia, maTTN, soTienThu, soTienConLai) values ('PTTP001', 'DG001', 'TTN001', 6000, 0)
-insert into PHIEUTHUTIENPHAT(maPTTP, maDocGia, maTTN, soTienThu, soTienConLai) values ('PTTP002', 'DG003', 'TTN002', 6000, 3000)
-
-insert into BAOCAOMUONSACH(maBCMuon, maLoaiSach, thang, soLuotMuon, tiLe) values ('BCM001', 'TLS01', 7, 30, 21.75)
-insert into BAOCAOMUONSACH(maBCMuon, maLoaiSach, thang, soLuotMuon, tiLe) values ('BCM002', 'TLS02', 7, 24, 16)
-
-insert into TONGLUOTMUON(maTLM, maBCMuon, tongLuotMuon) values ('TLM01', 'BCM001', 30)
-insert into TONGLUOTMUON(maTLM, maBCMuon, tongLuotMuon) values ('TLM02', 'BCM002', 16)
-
-insert into BAOCAOTRATRE(maBCTra, maSach, maPhieuMuon, soNgayTraTre, ngay) values ('BCTR001', 'SA001', 'PM001', 3, '23/05/2019')
-insert into BAOCAOTRATRE(maBCTra, maSach, maPhieuMuon, soNgayTraTre, ngay) values ('BCTR002', 'SA002', 'PM002', 3, '23/05/2019')
-
-----
-
-
-
-/*tra cuu sach 
+/*
 SELECT [maSach], [tenSach], [LOAISACH].[theLoai], [TACGIA].[tentacGia], [namXuatBan], [NHAXUATBAN].[tenNXB], [ngayNhap], [soLuongTon], [triGia]
 FROM [QuanLiThuVien].[dbo].[SACH], [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[TACGIA], [QuanLiThuVien].[dbo].[NHAXUATBAN]
 WHERE ([LOAISACH].[maLoaiSach] = [SACH].[maLoaiSach] AND [TACGIA].[maTacGia] = [SACH].[maTacGia] AND [NHAXUATBAN].[maNXB] = [SACH].[maNXB])
 */
 
 
-/*bao cao muon sach theo thang
+/*
 SELECT [LOAISACH].[theLoai], COUNT([theLoai]) AS soLuotMuon
 FROM [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH]
 WHERE ([PHIEUMUON].[maSach] = [SACH].[maSach] AND [SACH].[maLoaiSach] = [LOAISACH].[maLoaiSach] and MONTH([ngayMuon]) = '01')
@@ -240,10 +240,4 @@ GROUP BY [theLoai]
 SELECT COUNT(*) AS tongLuotMuon
 FROM [QuanLiThuVien].[dbo].[LOAISACH], [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH]
 WHERE ([PHIEUMUON].[maSach] = [SACH].[maSach] AND [SACH].[maLoaiSach] = [LOAISACH].[maLoaiSach])
-*/
-
-/*Bao cao tra tre (ngay)
-SELECT [tenSach], [ngayMuon], [ngayTra], CONVERT(int,[ngayTra]) - CONVERT(int,[ngayMuon]) AS [soNgayMuon]
-FROM [QuanLiThuVien].[dbo].[PHIEUMUON], [QuanLiThuVien].[dbo].[SACH], [QuanLiThuVien].[dbo].[PHIEUTRA]
-WHERE [PHIEUMUON].[maSach] = [SACH].[maSach] AND [PHIEUMUON].[maPhieuMuon] = [PHIEUTRA].[maPhieuMuon]
 */

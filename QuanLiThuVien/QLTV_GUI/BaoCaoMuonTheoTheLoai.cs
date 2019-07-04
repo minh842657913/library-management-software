@@ -41,7 +41,7 @@ namespace QLTV_GUI
             }
 
             ds.Tables.Add(dttb_TheLoai);
-            ds.WriteXmlSchema("Sample_BaoCaoMuonTheoTheLoai.xml");
+            ds.WriteXmlSchema("Sample.xml");
 
             rp_MuonTheoTheLoai formMuonTheoTheLoai = new rp_MuonTheoTheLoai(ds, strThangNam, intTongLuotMuon);
             formMuonTheoTheLoai.Show();
@@ -51,7 +51,7 @@ namespace QLTV_GUI
         {
             if (listTheLoai == null)
             {
-                MessageBox.Show("Không có mục cần tìm, hoặc có lỗi trong quá trình lấy dữ liệu từ DB");
+                MessageBox.Show("Không có sách cần tìm, hoặc có lỗi trong quá trình lấy dữ liệu từ DB");
                 return;
             }
 

@@ -1,70 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
-using System.Data.SqlClient;
 using QLTV_DTO;
 
 namespace QLTV_DAL
 {
-    public class PhieuPhatDAL
+    public class MuonSachDAL
     {
         private string connectionString;
-
         public string ConnectionString
         {
             get
             {
                 return connectionString;
             }
-
             set
             {
                 connectionString = value;
             }
         }
-
-        public PhieuPhatDAL()
+        public MuonSachDAL()
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
-
-        public PhieuPhat Select(string strMaDocGia)
+        public List<MuonSachDTO> select()
         {
-            string strQuery = string.Empty;
-            strQuery += " SELECT [DOCGIA].[maDocGia], [hoTen], [tongNo]";
-            strQuery += " FROM [THONGTINNO], [DOCGIA]";
-            strQuery += " WHERE ([DOCGIA].[maDocGia] = [THONGTINNO].[maDocGia] AND [DOCGIA].[maDocGia] = @maDocGia)";
+            string query = string.Empty;
+            query += "SELECT PHIEUMUON.maSach,SACH.tenSach";            
+            query += "FROM PHIEUMUON,SACH";
+            query += "where PHIEUMUON.maSach=SACH.maSach";
 
-            PhieuPhat phieuPhat = new PhieuPhat();
+            List<MuonSachDTO> lsMuonSach = new List<MuonSachDTO>();
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
+
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = strQuery;
-                    cmd.Parameters.AddWithValue("@maDocGia", strMaDocGia);
+                    cmd.CommandText = query;
 
                     try
                     {
-                        //Mo ket noi
                         con.Open();
-
                         SqlDataReader reader = null;
-                        //Thuc thi doan Query
                         reader = cmd.ExecuteReader();
-
                         if (reader.HasRows == true)
                         {
                             while (reader.Read())
                             {
-                                phieuPhat.MaDocGia = reader["maDocGia"].ToString();
-                                phieuPhat.TongNo = float.Parse(reader["tongNo"].ToString());
-                                phieuPhat.TenDocGia = reader["hoTen"].ToString();
+                                MuonSachDTO ms = new MuonSachDTO();
+                                ms.MaSach = reader["maSach"].ToString();
+                                ms.TenSach = reader["tenSach"].ToString();
+                                lsMuonSach.Add(ms);
                             }
                         }
 
@@ -78,7 +71,8 @@ namespace QLTV_DAL
                     }
                 }
             }
-            return phieuPhat;
+            return lsMuonSach;
         }
+
     }
 }
